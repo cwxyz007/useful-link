@@ -9,8 +9,12 @@ module.exports = env => {
    * @type {import('webpack').Configuration}
    */
   const webpackConfig = {
-    entry: p('src', 'App.jsx'),
+    entry: [p('src', 'App.jsx')],
     mode: debug ? 'development' : 'production',
+    externals: {
+      react: 'React',
+      'react-dom': 'ReactDOM'
+    },
     output: {
       path: p('dist'),
       publicPath: 'dist',
@@ -24,6 +28,20 @@ module.exports = env => {
           use: {
             loader: 'babel-loader'
           }
+        },
+        {
+          test: /\.less$/,
+          use: [
+            {
+              loader: 'style-loader'
+            },
+            {
+              loader: 'css-loader'
+            },
+            {
+              loader: 'less-loader'
+            }
+          ]
         }
       ]
     }

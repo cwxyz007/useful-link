@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import Axios from 'axios'
 import Yaml from 'js-yaml'
 import NProgress from 'nprogress'
+import './style.less'
 
 NProgress.configure({
   showSpinner: false
