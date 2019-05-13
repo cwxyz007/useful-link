@@ -9,12 +9,23 @@ module.exports = env => {
    * @type {import('webpack').Configuration}
    */
   const webpackConfig = {
-    entry: p('src', 'index.js'),
+    entry: p('src', 'App.jsx'),
     mode: debug ? 'development' : 'production',
     output: {
       path: p('dist'),
       publicPath: 'dist',
       filename: 'index.js'
+    },
+    module: {
+      rules: [
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader'
+          }
+        }
+      ]
     }
   }
 
