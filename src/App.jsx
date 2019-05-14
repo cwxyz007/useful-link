@@ -1,5 +1,4 @@
-import * as React from 'react'
-import { render } from 'react-dom'
+import { h, render, Component } from 'preact'
 import Axios from 'axios'
 import Yaml from 'js-yaml'
 import NProgress from 'nprogress'
@@ -14,7 +13,7 @@ async function getConfigsData () {
   return Yaml.load(data)
 }
 
-class App extends React.Component {
+class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -33,10 +32,10 @@ class App extends React.Component {
     NProgress.done()
   }
 
-  render () {
+  render (_, state) {
     return (
       <div className="app">
-        <pre>{this.state.yaml}</pre>
+        <pre>{state.yaml}</pre>
       </div>
     )
   }

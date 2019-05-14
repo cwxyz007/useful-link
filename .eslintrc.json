@@ -4,6 +4,11 @@
     "es6": true
   },
   "extends": ["plugin:react/recommended", "standard"],
+  "settings": {
+    "react": {
+      "pragma": "h"
+    }
+  },
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"

@@ -11,10 +11,6 @@ module.exports = env => {
   const webpackConfig = {
     entry: [p('src', 'App.jsx')],
     mode: debug ? 'development' : 'production',
-    externals: {
-      react: 'React',
-      'react-dom': 'ReactDOM'
-    },
     output: {
       path: p('dist'),
       publicPath: 'dist',
