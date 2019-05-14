@@ -3,14 +3,16 @@ header:
   color: '#ffffff'
   addSite: '添加新网站'
 
+# colors reference: https://coolors.co/fbc3c8-ffface-e4f9d1-bbf2ed-adccd9
 categories:
   search:
-    bgColor: '#E4F9D1'
     title: 搜索工具
+    bgColor: '#E4F9D1'
   development:
-    bgColor: '#FFFACE'
     title: 开发工具
+    bgColor: '#FFFACE'
   icons:
+    title: 图标库
     bgColor: '#BBF2ED'
 
 navigation:

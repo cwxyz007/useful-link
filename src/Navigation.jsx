@@ -1,6 +1,10 @@
 import { h } from 'preact'
 
 function NavigationItem ({ item, site }) {
+  if (item === 0) {
+    return <div className="navigation-item" style={{ opacity: 0 }} />
+  }
+
   const icon = item.icon || 'https://s2.googleusercontent.com/s2/favicons?domain_url=' + (item.links || {}).web
 
   const links = Object.keys(item.links || {}).map((type) => {
@@ -36,10 +40,12 @@ function NavigationItem ({ item, site }) {
 }
 
 export default function Navigation ({ items, site, bgColor }) {
+  const blankItems = [0, 0, 0, 0, 0]
+
   return (
     <div className="navigation" style={{ backgroundColor: bgColor }}>
-      {items.map((item) => (
-        <NavigationItem item={item} key={item.url} site={site} />
+      {items.concat(blankItems).map((item, i) => (
+        <NavigationItem item={item} key={'navigation' + i} site={site} />
       ))}
     </div>
   )

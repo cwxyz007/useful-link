@@ -11,14 +11,20 @@
 
 html,
 body,
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
 #app,
 .app {
   height: 100%;
 }
 
-.app {
-  @header-height: 60px;
+@header-height: 60px;
 
+.app {
   .header {
     height: @header-height;
   }
@@ -34,14 +40,10 @@ body,
 
   .categories {
     width: @width;
-    height: 100%;
   }
 
   .navigation {
-    height: 100%;
-    flex: auto;
-    display: flex;
-    flex-wrap: wrap;
+    width: calc(100% - @width);
   }
 }
 
@@ -93,7 +95,6 @@ body,
 
 .categories {
   @border-width: 1px;
-  box-sizing: border-box;
   padding: 50px 0 0 50px;
   border-right: @border-width solid rgba(0, 0, 0, 0.1);
 
@@ -132,10 +133,15 @@ body,
 
 .navigation {
   transition: background-color ease 0.2s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+
   &-item {
     @footer-height: 20px;
 
-    width: 220px;
+    width: 240px;
     height: 100px;
     overflow: hidden;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
@@ -144,6 +150,7 @@ body,
     transition: box-shadow ease 0.2s;
     border-radius: 3px;
     background-color: #ffffff;
+    display: inline-block;
 
     &:hover {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
