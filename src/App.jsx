@@ -58,7 +58,12 @@ class App extends Component {
     return (
       <div className="app">
         <div className="header header-img" style={{ backgroundImage: `url(${site.header.bgImg})` }}>
-          <span className="header-title ab-v-center">Ex Sample Navigation</span>
+          <span className="header-title ab-v-center" style={{ color: site.header.color }}>
+            Ex Sample Navigation
+          </span>
+          <span hidden className="header-add-site" title={site.header.addSite}>
+            +
+          </span>
         </div>
         <div className="content">
           <Categories
@@ -67,7 +72,7 @@ class App extends Component {
             selectCategory={this.selectedCategory}
             selectedCategory={selectedCategory}
           />
-          <Navigation items={items} />
+          <Navigation items={items} site={site} />
         </div>
       </div>
     )

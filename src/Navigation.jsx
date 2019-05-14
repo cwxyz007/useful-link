@@ -1,18 +1,45 @@
 import { h } from 'preact'
 
-function NavigationItem ({ item }) {
+function NavigationItem ({ item, site }) {
+  const icon = item.icon || 'http://s2.googleusercontent.com/s2/favicons?domain_url=' + (item.links || {}).web
+
+  const links = Object.keys(item.links || {}).map((type) => {
+    const url = item.links[type]
+    const faIcon = site.navigation.icons[type]
+    return (
+      <a
+        className="navigation-item__link"
+        title={url}
+        href={url}
+        key={item.title + url}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i className={faIcon + ' icon'} />
+      </a>
+    )
+  })
+
   return (
-    <a href={item.url} rel="noopener noreferrer" target="_blank">
-      {item.title}
-    </a>
+    <div className="navigation-item">
+      <div className="navigation-item__body">
+        <div className="flex-v-center">
+          <img src={icon} className="navigation-item__icon" />
+          <span className="navigation-item__title">{item.title}</span>
+        </div>
+        <p className="navigation-item__description">{item.desc}</p>
+      </div>
+      <div className="navigation-item__divider" />
+      <div className="navigation-item__footer">{links}</div>
+    </div>
   )
 }
 
-export default function Navigation ({ items }) {
+export default function Navigation ({ items, site }) {
   return (
     <div className="navigation">
       {items.map((item) => (
-        <NavigationItem item={item} key={item.url} />
+        <NavigationItem item={item} key={item.url} site={site} />
       ))}
     </div>
   )

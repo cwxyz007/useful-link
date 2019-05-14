@@ -4,8 +4,16 @@
   transform: translateY(-50%);
 }
 
+.flex-v-center {
+  display: flex;
+  align-items: center;
+}
+
 .app {
-  color: gray;
+  .header {
+    overflow: hidden;
+  }
+
   .header-img {
     position: relative;
     width: 100%;
@@ -18,5 +26,107 @@
     color: white;
     font-size: 1.2em;
     left: 30px;
+  }
+
+  .header-add-site {
+    @size: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(70%, -70%);
+    width: @size;
+    height: @size;
+    background-color: #4cbdff;
+    border-radius: 50%;
+    transition: transform ease 0.4s;
+
+    &::before {
+      content: '+';
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: bolder;
+      position: absolute;
+      left: 30%;
+      top: 70%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+      transform: translate(50%, -50%);
+    }
+  }
+
+  .navigation {
+    &-item {
+      @footer-height: 20px;
+
+      width: 220px;
+      height: 100px;
+      overflow: hidden;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+      margin: 10px 20px;
+      padding: 10px;
+      transition: box-shadow ease 0.4s;
+      border-radius: 3px;
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      &__body {
+        height: calc(100% - @footer-height);
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__divider {
+        margin: 3px 0 3px -10px;
+        width: calc(100% + 20px);
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      &__footer {
+        height: @footer-height;
+        padding: 0 -10px;
+
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      &__icon {
+        @size: 16px;
+
+        display: inline-block;
+        object-fit: contain;
+        margin-right: 7px;
+        width: @size;
+        height: @size;
+      }
+
+      &__title {
+        margin: 0;
+      }
+
+      &__description {
+        font-size: 14px;
+        line-height: 1.3em;
+        margin: 10px 0 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      &__link {
+        text-decoration: none;
+
+        .icon {
+          transition: color ease 0.4s;
+
+          &:hover {
+            color: #4cbdff;
+          }
+        }
+      }
+    }
   }
 }

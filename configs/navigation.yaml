@@ -1,11 +1,21 @@
 search:
-  - url: https://www.baidu.com
-    title: 百度网站
+  - title: 百度网站
     desc: 度娘啥都能搜，包括女装大佬
-  - url: https://www.google.com
-    title: 谷歌网站
+    links:
+      web: https://www.baidu.com
+
+  - title: 谷歌网站
     desc: 谷歌啥都不能搜，除非你有梯子
+    links:
+      web: https://www.google.com
+
 development:
-  - url: https://www.github.com
-    title: Github
+  - title: Github
     desc: 全球最大同性交友网站
+    links:
+      web: https://www.github.com
+
+icons:
+  - title: VectorLogoZone
+    links:
+      web: https://www.vectorlogo.zone

@@ -1,5 +1,12 @@
 header:
-  bgImg: https://img1.gamersky.com/upimg/pic/2019/03/03/201903031838563738.jpg
+  bgImg: https://i.imgur.com/4Ofhqe6.png
+  color: '#ffffff'
+  addSite: '添加新网站'
+
 categories:
   search: 搜索
   development: 开发工具
+
+navigation:
+  icons:
+    web: fas fa-external-link-alt
