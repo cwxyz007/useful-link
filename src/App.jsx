@@ -1,41 +1,74 @@
 import { h, render, Component } from 'preact'
-import Axios from 'axios'
-import Yaml from 'js-yaml'
-import NProgress from 'nprogress'
 import './style.less'
+import NProgress from 'nprogress'
+import { getSiteConfigs, getNavigationData } from './configs'
+import Categories from './Categories'
+import Navigation from './Navigation'
 
 NProgress.configure({
   showSpinner: false
 })
 
-async function getConfigsData () {
-  const { data } = await Axios.get('./configs.yaml')
-  return Yaml.load(data)
-}
-
 class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      yaml: ''
+      site: null,
+      selectedCategory: null,
+      categories: [],
+      navigation: {}
     }
 
     this.init()
+    this.selectedCategory = this.selectedCategory.bind(this)
+  }
+
+  selectedCategory (category) {
+    this.setState({
+      selectedCategory: category
+    })
   }
 
   async init () {
     NProgress.start()
-    const data = await getConfigsData()
+    const siteConfigs = await getSiteConfigs()
+    NProgress.set(0.4)
+    const navigation = await getNavigationData()
+    NProgress.set(0.6)
+    const categories = Object.keys(navigation)
+
     this.setState({
-      yaml: Yaml.dump(data)
+      site: siteConfigs,
+      navigation,
+      categories,
+      selectedCategory: categories[0]
     })
+
     NProgress.done()
   }
 
-  render (_, state) {
+  render () {
+    const { site, navigation, selectedCategory, categories } = this.state
+
+    if (!site) {
+      return <div />
+    }
+
+    const items = navigation[selectedCategory]
     return (
       <div className="app">
-        <pre>{state.yaml}</pre>
+        <div className="header header-img" style={{ backgroundImage: `url(${site.header.bgImg})` }}>
+          <span className="header-title ab-v-center">Ex Sample Navigation</span>
+        </div>
+        <div className="content">
+          <Categories
+            items={categories}
+            site={site}
+            selectCategory={this.selectedCategory}
+            selectedCategory={selectedCategory}
+          />
+          <Navigation items={items} />
+        </div>
       </div>
     )
   }

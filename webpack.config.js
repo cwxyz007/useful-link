@@ -2,7 +2,7 @@ const path = require('path')
 
 const p = (...args) => path.join(__dirname, ...args)
 
-module.exports = env => {
+module.exports = (env) => {
   const debug = env.NODE_ENV === 'development'
 
   /**
@@ -15,6 +15,9 @@ module.exports = env => {
       path: p('dist'),
       publicPath: 'dist',
       filename: 'index.js'
+    },
+    resolve: {
+      extensions: ['.js', '.jsx']
     },
     module: {
       rules: [
