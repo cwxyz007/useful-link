@@ -1,7 +1,7 @@
 import { h } from 'preact'
 
 function NavigationItem ({ item, site }) {
-  const icon = item.icon || 'http://s2.googleusercontent.com/s2/favicons?domain_url=' + (item.links || {}).web
+  const icon = item.icon || 'https://s2.googleusercontent.com/s2/favicons?domain_url=' + (item.links || {}).web
 
   const links = Object.keys(item.links || {}).map((type) => {
     const url = item.links[type]
