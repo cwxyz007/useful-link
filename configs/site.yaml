@@ -1,7 +1,9 @@
 header:
   bgImg: https://i.imgur.com/4Ofhqe6.png
   color: '#ffffff'
-  addSite: '添加新网站'
+  edit:
+    title: 添加新网站
+    addr: https://github.com/cwxyz007/useful-link/blob/master/configs/navigation.yaml
 
 # colors reference: https://coolors.co/fbc3c8-ffface-e4f9d1-bbf2ed-adccd9
 categories:

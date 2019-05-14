@@ -63,9 +63,15 @@ class App extends Component {
           <span className="header-title ab-v-center" style={{ color: site.header.color }}>
             Ex Sample Navigation
           </span>
-          <span hidden className="header-add-site" title={site.header.addSite}>
+          <a
+            className="header-add-site"
+            rel="noopener noreferrer"
+            href={site.header.edit.addr}
+            target="_blank"
+            title={site.header.edit.title}
+          >
             +
-          </span>
+          </a>
         </div>
         <div className="content">
           <Categories
