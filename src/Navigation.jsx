@@ -35,9 +35,9 @@ function NavigationItem ({ item, site }) {
   )
 }
 
-export default function Navigation ({ items, site }) {
+export default function Navigation ({ items, site, bgColor }) {
   return (
-    <div className="navigation">
+    <div className="navigation" style={{ backgroundColor: bgColor }}>
       {items.map((item) => (
         <NavigationItem item={item} key={item.url} site={site} />
       ))}

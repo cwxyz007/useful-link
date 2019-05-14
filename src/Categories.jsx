@@ -4,11 +4,21 @@ export default function Categories ({ items, site, selectCategory, selectedCateg
   return (
     <div className="categories">
       {items.map((category) => {
-        const name = site.categories[category] || category
+        const categoryConfig = site.categories[category] || {}
+
+        const name = categoryConfig.title || category
+        const classes = ['category-btn']
+
         const isSelect = selectedCategory === category
+        if (isSelect) classes.push('category-btn__selected')
 
         return (
-          <button key={category} onClick={() => selectCategory(category)} className={isSelect && 'selected'}>
+          <button
+            style={{ backgroundColor: categoryConfig.bgColor }}
+            className={classes.join(' ')}
+            key={category}
+            onClick={() => selectCategory(category)}
+          >
             {name}
           </button>
         )

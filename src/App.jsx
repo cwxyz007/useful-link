@@ -54,6 +54,8 @@ class App extends Component {
       return <div />
     }
 
+    const bgColor = (site.categories[selectedCategory] || {}).bgColor
+
     const items = navigation[selectedCategory]
     return (
       <div className="app">
@@ -72,7 +74,7 @@ class App extends Component {
             selectCategory={this.selectedCategory}
             selectedCategory={selectedCategory}
           />
-          <Navigation items={items} site={site} />
+          <Navigation items={items} site={site} bgColor={bgColor} />
         </div>
       </div>
     )
