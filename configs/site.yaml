@@ -16,7 +16,11 @@ categories:
   icons:
     title: 图标库
     bgColor: '#BBF2ED'
+  tools:
+    title: 小工具
+    bgColor: '#ADCCD9'
 
 navigation:
   icons:
     web: fas fa-external-link-alt
+    git: fab fa-github
