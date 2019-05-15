@@ -7,6 +7,7 @@ export default function Categories ({ items, site, selectCategory, selectedCateg
         const categoryConfig = site.categories[category] || {}
 
         const name = categoryConfig.title || category
+        const icon = categoryConfig.icon
         const classes = ['category-btn']
 
         const isSelect = selectedCategory === category
@@ -19,6 +20,7 @@ export default function Categories ({ items, site, selectCategory, selectedCateg
             key={category}
             onClick={() => selectCategory(category)}
           >
+            {icon && <i className={`category-btn__icon ${icon}`} />}
             {name}
           </button>
         )
