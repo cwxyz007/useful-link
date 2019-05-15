@@ -18,3 +18,9 @@ icons:
   - title: VectorLogoZone
     links:
       web: https://www.vectorlogo.zone
+
+tools:
+  - title: Cloc
+    desc: 统计代码行数的工具
+    links:
+      git: https://github.com/AlDanial/cloc
