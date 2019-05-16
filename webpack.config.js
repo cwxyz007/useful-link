@@ -28,7 +28,7 @@ module.exports = (env) => {
     resolve: {
       extensions: ['.js', '.jsx']
     },
-    devtool: debug ? 'inline-source-map' : 'source-map',
+    devtool: debug ? 'cheap-module-eval-source-map' : 'source-map',
     module: {
       rules: [
         {
@@ -44,27 +44,17 @@ module.exports = (env) => {
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
-                hmr: debug,
-                sourceMap: true
+                hmr: debug
               }
             },
             {
-              loader: 'css-loader',
-              options: {
-                sourceMap: true
-              }
+              loader: 'css-loader'
             },
             {
-              loader: 'postcss-loader',
-              options: {
-                sourceMap: true
-              }
+              loader: 'postcss-loader'
             },
             {
-              loader: 'less-loader',
-              options: {
-                sourceMap: true
-              }
+              loader: 'less-loader'
             }
           ]
         }
