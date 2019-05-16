@@ -1,4 +1,7 @@
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const TerserJSPlugin = require('terser-webpack-plugin')
 
 const p = (...args) => path.join(__dirname, ...args)
 
@@ -16,6 +19,12 @@ module.exports = (env) => {
       publicPath: 'dist',
       filename: 'index.js'
     },
+    optimization: {
+      minimizer: [new OptimizeCssAssetsPlugin({}), new TerserJSPlugin({ cache: true })],
+      splitChunks: {
+        chunks: 'async'
+      }
+    },
     resolve: {
       extensions: ['.js', '.jsx']
     },
@@ -32,7 +41,10 @@ module.exports = (env) => {
           test: /\.less$/,
           use: [
             {
-              loader: 'style-loader'
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                hmr: debug
+              }
             },
             {
               loader: 'css-loader'
@@ -43,7 +55,13 @@ module.exports = (env) => {
           ]
         }
       ]
-    }
+    },
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: '[name].css',
+        chunkFilename: '[id].css'
+      })
+    ]
   }
 
   return webpackConfig
