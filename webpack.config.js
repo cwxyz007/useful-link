@@ -20,7 +20,7 @@ module.exports = (env) => {
       filename: 'index.js'
     },
     optimization: {
-      minimizer: [new OptimizeCssAssetsPlugin({}), new TerserJSPlugin({ cache: true })],
+      minimizer: [new OptimizeCssAssetsPlugin({}), new TerserJSPlugin({ cache: true, sourceMap: true })],
       splitChunks: {
         chunks: 'async'
       }
@@ -28,6 +28,7 @@ module.exports = (env) => {
     resolve: {
       extensions: ['.js', '.jsx']
     },
+    devtool: debug ? 'inline-source-map' : 'source-map',
     module: {
       rules: [
         {
@@ -43,14 +44,27 @@ module.exports = (env) => {
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
-                hmr: debug
+                hmr: debug,
+                sourceMap: true
               }
             },
             {
-              loader: 'css-loader'
+              loader: 'css-loader',
+              options: {
+                sourceMap: true
+              }
             },
             {
-              loader: 'less-loader'
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true
+              }
+            },
+            {
+              loader: 'less-loader',
+              options: {
+                sourceMap: true
+              }
             }
           ]
         }
