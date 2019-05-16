@@ -1,0 +1,40 @@
+// colors reference: https://coolors.co/fbc3c8-ffface-e4f9d1-bbf2ed-adccd9
+
+{
+  "header": {
+    "bgImg": "https://images6.alphacoders.com/898/898345.png",
+    "color": "#ffffff",
+    "edit": {
+      "title": "添加新网站",
+      "addr": "https://github.com/cwxyz007/useful-link/blob/master/configs/navigation.yaml"
+    }
+  },
+  "categories": {
+    "search": {
+      "title": "搜索工具",
+      "bgColor": "#E4F9D1",
+      "icon": "fas fa-search"
+    },
+    "development": {
+      "title": "开发工具",
+      "bgColor": "#FFFACE",
+      "icon": "fas fa-code"
+    },
+    "icons": {
+      "title": "图标库",
+      "bgColor": "#BBF2ED",
+      "icon": "far fa-images"
+    },
+    "tools": {
+      "title": "小工具",
+      "bgColor": "#ADCCD9",
+      "icon": "fas fa-tools"
+    }
+  },
+  "navigation": {
+    "icons": {
+      "web": "fas fa-external-link-alt",
+      "git": "fab fa-github"
+    }
+  }
+}
