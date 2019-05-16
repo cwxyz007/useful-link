@@ -9,11 +9,6 @@
     }
   },
   "categories": {
-    "search": {
-      "title": "搜索工具",
-      "bgColor": "#E4F9D1",
-      "icon": "fas fa-search"
-    },
     "development": {
       "title": "开发工具",
       "bgColor": "#FFFACE",
