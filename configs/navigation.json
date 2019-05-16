@@ -1,20 +1,4 @@
 {
-  "search": [
-    {
-      "title": "百度网站",
-      "desc": "度娘啥都能搜，包括女装大佬",
-      "links": {
-        "web": "https://www.baidu.com"
-      }
-    },
-    {
-      "title": "谷歌网站",
-      "desc": "谷歌啥都不能搜，除非你有梯子",
-      "links": {
-        "web": "https://www.google.com"
-      }
-    }
-  ],
   "development": [
     {
       "title": "Github",
