@@ -25,5 +25,15 @@
         "git": "https://github.com/AlDanial/cloc"
       }
     }
+  ],
+  "other": [
+    {
+      "title": "I18n locales code",
+      "icon": "fas fa-language",
+      "desc": "翻译时对应的 code",
+      "links": {
+        "web": "https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
+      }
+    }
   ]
 }
