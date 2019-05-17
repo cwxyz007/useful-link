@@ -23,6 +23,11 @@
       "title": "小工具",
       "bgColor": "#ADCCD9",
       "icon": "fas fa-tools"
+    },
+    "other": {
+      "title": "其它",
+      bgColor: "#FBC3C8",
+      "icon": "fas fa-archive"
     }
   },
   "navigation": {
