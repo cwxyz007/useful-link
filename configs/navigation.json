@@ -34,6 +34,13 @@
       "links": {
         "web": "https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
       }
+    },
+    {
+      "title": "今日诗词 API",
+      "desc": "诗词实时智能推荐 - 一言 API",
+      "links": {
+        "web": "https://www.jinrishici.com"
+      }
     }
   ]
 }
