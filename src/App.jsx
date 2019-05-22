@@ -10,6 +10,8 @@ NProgress.configure({
   showSpinner: false
 })
 
+const selectCategoryKey = 'category'
+
 class App extends Component {
   constructor (props) {
     super(props)
@@ -33,6 +35,7 @@ class App extends Component {
   }
 
   selectedCategory (category) {
+    localStorage.setItem(selectCategoryKey, category)
     this.setState({
       selectedCategory: category
     })
@@ -50,7 +53,7 @@ class App extends Component {
       site: siteConfigs,
       navigation,
       categories,
-      selectedCategory: categories[0]
+      selectedCategory: localStorage.getItem(selectCategoryKey) || categories[0]
     })
 
     NProgress.done()
