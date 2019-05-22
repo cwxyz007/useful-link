@@ -4,6 +4,7 @@ import NProgress from 'nprogress'
 import { getSiteConfigs, getNavigationData } from './configs'
 import Categories from './Categories'
 import Navigation from './Navigation'
+import { shiciCache } from './utils'
 
 NProgress.configure({
   showSpinner: false
@@ -16,11 +17,19 @@ class App extends Component {
       site: null,
       selectedCategory: null,
       categories: [],
-      navigation: {}
+      navigation: {},
+      shiCi: {}
     }
 
     this.init()
+    this.initJinRiShiCi()
     this.selectedCategory = this.selectedCategory.bind(this)
+  }
+
+  async initJinRiShiCi () {
+    this.setState({
+      shiCi: await shiciCache.get()
+    })
   }
 
   selectedCategory (category) {
@@ -48,7 +57,7 @@ class App extends Component {
   }
 
   render () {
-    const { site, navigation, selectedCategory, categories } = this.state
+    const { site, navigation, selectedCategory, categories, shiCi } = this.state
 
     if (!site) {
       return <div />
@@ -57,11 +66,22 @@ class App extends Component {
     const bgColor = (site.categories[selectedCategory] || {}).bgColor
 
     const items = navigation[selectedCategory]
+
+    const shiCiContent = shiCi && `${shiCi.content} 一一 ${shiCi.origin.author}`
     return (
       <div className="app">
-        <div className="header header-img" style={{ backgroundImage: `url(${site.header.bgImg})` }}>
-          <span className="header-title ab-v-center" style={{ color: site.header.color }}>
-            Ex Sample Navigation
+        <div
+          className="header header-img"
+          style={{ backgroundImage: `url(${site.header.bgImg})` }}
+        >
+          <span
+            className="header-title ab-v-center"
+            style={{
+              color: site.header.color,
+              fontSize: '1.2em'
+            }}
+          >
+            {shiCiContent}
           </span>
           <a
             className="header-add-site"

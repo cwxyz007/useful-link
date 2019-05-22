@@ -76,6 +76,13 @@
       "links": {
         "web": "https://obsproject.com/"
       }
+    },
+    {
+      "title": "壁纸网站",
+      "desc": "桌面、手机壁纸在线下载网站/社区",
+      "links": {
+        "web": "https://wall.alphacoders.com/"
+      }
     }
   ]
 }

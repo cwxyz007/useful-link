@@ -1,8 +1,8 @@
 // colors reference: https://coolors.co/fbc3c8-ffface-e4f9d1-bbf2ed-adccd9
 {
   "header": {
-    "bgImg": "https://images6.alphacoders.com/898/898345.png",
-    "color": "#ffffff",
+    "bgImg": "https://images8.alphacoders.com/613/613334.jpg",
+    "color": "#000000",
     "edit": {
       "title": "添加新网站",
       "addr": "https://github.com/cwxyz007/useful-link/blob/master/configs/navigation.json"
