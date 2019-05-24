@@ -45,6 +45,13 @@
       "links": {
         "web": "https://www.figma.com"
       }
+    },
+    {
+      "title": "Removeg",
+      "desc": "免费在线 AI 抠图神器，同时提供 API 和 PS 插件",
+      "links": {
+        "web": "https://www.remove.bg"
+      }
     }
   ],
   "other": [
