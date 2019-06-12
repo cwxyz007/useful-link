@@ -17,14 +17,14 @@
   ],
   "software": [
     {
-      "title": "everything",
+      "title": "Everything",
       "desc": "小巧，快速的搜索工具",
       "links": {
         "web": "https://voidtools.com"
       }
     },
     {
-      "title": "rufus",
+      "title": "Rufus",
       "desc": "U 盘启动，引导制作器",
       "links": {
         "git": "https://github.com/pbatard/rufus",
