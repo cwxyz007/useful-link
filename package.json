@@ -36,7 +36,7 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "jinrishici": "^1.0.6",
     "nprogress": "^0.2.0",
     "preact": "^8.4.2",
