@@ -13,6 +13,21 @@
       "links": {
         "web": "https://materializecss.com/"
       }
+    },
+    {
+      "title": "I18n locales code",
+      "icon": "fas fa-language",
+      "desc": "翻译时对应的 code",
+      "links": {
+        "web": "https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
+      }
+    },
+    {
+      "title": "今日诗词 API",
+      "desc": "诗词实时智能推荐 - 一言 API",
+      "links": {
+        "web": "https://www.jinrishici.com"
+      }
     }
   ],
   "software": [
@@ -25,22 +40,19 @@
     },
     {
       "title": "Rufus",
-      "desc": "U 盘启动，引导制作器",
+      "desc": "小巧的 U 盘启动，引导制作工具",
       "links": {
         "git": "https://github.com/pbatard/rufus",
         "web": "https://rufus.ie"
       }
-    }
-  ],
-  "icons": [
+    },
     {
-      "title": "VectorLogoZone",
+      "title": "OBS 直播工具",
+      "desc": "开源直播工具",
       "links": {
-        "web": "https://www.vectorlogo.zone"
+        "web": "https://obsproject.com/"
       }
-    }
-  ],
-  "tools": [
+    },
     {
       "title": "Cloc",
       "icon": "fas fa-tools",
@@ -48,7 +60,9 @@
       "links": {
         "git": "https://github.com/AlDanial/cloc"
       }
-    },
+    }
+  ],
+  "online-tools": [
     {
       "title": "百度脑图",
       "desc": "百度良心软件，在线脑图工具",
@@ -64,6 +78,13 @@
       }
     },
     {
+      "title": "Squoosh",
+      "desc": "Web 技术图片压缩工具",
+      "links": {
+        "web": "https://squoosh.app/"
+      }
+    },
+    {
       "title": "Removbg",
       "desc": "免费在线 AI 抠图神器，同时提供 API 和 PS 插件",
       "links": {
@@ -73,32 +94,9 @@
   ],
   "other": [
     {
-      "title": "I18n locales code",
-      "icon": "fas fa-language",
-      "desc": "翻译时对应的 code",
+      "title": "VectorLogoZone",
       "links": {
-        "web": "https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
-      }
-    },
-    {
-      "title": "今日诗词 API",
-      "desc": "诗词实时智能推荐 - 一言 API",
-      "links": {
-        "web": "https://www.jinrishici.com"
-      }
-    },
-    {
-      "title": "Squoosh",
-      "desc": "Web 技术图片压缩工具",
-      "links": {
-        "web": "https://squoosh.app/"
-      }
-    },
-    {
-      "title": "OBS 直播工具",
-      "desc": "开源直播工具",
-      "links": {
-        "web": "https://obsproject.com/"
+        "web": "https://www.vectorlogo.zone"
       }
     },
     {

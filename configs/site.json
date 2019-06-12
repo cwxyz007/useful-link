@@ -14,13 +14,8 @@
       "bgColor": "#FFFACE",
       "icon": "fas fa-code"
     },
-    "icons": {
-      "title": "图标库",
-      "bgColor": "#BBF2ED",
-      "icon": "far fa-images"
-    },
-    "tools": {
-      "title": "小工具",
+    "online-tools": {
+      "title": "在线工具",
       "bgColor": "#ADCCD9",
       "icon": "fas fa-tools"
     },
