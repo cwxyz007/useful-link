@@ -28,6 +28,11 @@
       "title": "其它",
       "bgColor": "#FBC3C8",
       "icon": "fas fa-archive"
+    },
+    "software": {
+      "title": "软件分享",
+      "bgColor": "#CEF2FF",
+      "icon": "fas fa-th"
     }
   },
   "navigation": {
