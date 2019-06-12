@@ -25,7 +25,9 @@ function NavigationItem ({ item, site }) {
     return <div className="navigation-item" style={{ opacity: 0 }} />
   }
 
-  const links = Object.keys(item.links || {}).map((type) => {
+  const sortLinkKeys = Object.keys(item.links || {})
+  sortLinkKeys.sort((a, b) => (a > b ? -1 : 1))
+  const links = sortLinkKeys.map((type) => {
     const url = item.links[type]
     const faIcon = site.navigation.icons[type]
     return <FooterLink url={url} key={item.title + url} icon={faIcon} />
