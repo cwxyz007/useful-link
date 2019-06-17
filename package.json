@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --env.NODE_ENV=development",
-    "build": "webpack --env.NODE_ENV=production"
+    "build": "webpack --env.NODE_ENV=production",
+    "lint": "eslint src/**/*.jsx src/**/*.js"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -36,7 +37,6 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
-    "axios": "^0.18.1",
     "fuse.js": "^3.4.5",
     "jinrishici": "^1.0.6",
     "nprogress": "^0.2.0",
