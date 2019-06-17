@@ -1,110 +1,117 @@
-{
-  "development": [
-    {
-      "title": "Github",
-      "desc": "全球 Git 分布式存储仓库",
-      "links": {
-        "web": "https://www.github.com"
-      }
-    },
-    {
-      "title": "Material CSS Kit",
-      "desc": "Materialize 风格的样式组件",
-      "links": {
-        "web": "https://materializecss.com/"
-      }
-    },
-    {
-      "title": "I18n locales code",
-      "icon": "fas fa-language",
-      "desc": "翻译时对应的 code",
-      "links": {
-        "web": "https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
-      }
-    },
-    {
-      "title": "今日诗词 API",
-      "desc": "诗词实时智能推荐 - 一言 API",
-      "links": {
-        "web": "https://www.jinrishici.com"
-      }
+[
+  {
+    "title": "Github",
+    "desc": "全球 Git 分布式存储仓库",
+    "tags": ["development"],
+    "links": {
+      "web": "https://www.github.com"
     }
-  ],
-  "software": [
-    {
-      "title": "Everything",
-      "desc": "小巧，快速的搜索工具",
-      "links": {
-        "web": "https://voidtools.com"
-      }
-    },
-    {
-      "title": "Rufus",
-      "desc": "小巧的 U 盘启动，引导制作工具",
-      "links": {
-        "git": "https://github.com/pbatard/rufus",
-        "web": "https://rufus.ie"
-      }
-    },
-    {
-      "title": "OBS 直播工具",
-      "desc": "开源直播工具",
-      "links": {
-        "web": "https://obsproject.com/"
-      }
-    },
-    {
-      "title": "Cloc",
-      "icon": "fas fa-tools",
-      "desc": "统计代码行数的工具",
-      "links": {
-        "git": "https://github.com/AlDanial/cloc"
-      }
+  },
+  {
+    "title": "Material CSS Kit",
+    "desc": "Materialize 风格的样式组件",
+    "tags": ["development"],
+    "links": {
+      "web": "https://materializecss.com/"
     }
-  ],
-  "online-tools": [
-    {
-      "title": "百度脑图",
-      "desc": "百度良心软件，在线脑图工具",
-      "links": {
-        "web": "http://naotu.baidu.com/"
-      }
-    },
-    {
-      "title": "Figma",
-      "desc": "在线原型设计工具",
-      "links": {
-        "web": "https://www.figma.com"
-      }
-    },
-    {
-      "title": "Squoosh",
-      "desc": "Web 技术图片压缩工具",
-      "links": {
-        "web": "https://squoosh.app/"
-      }
-    },
-    {
-      "title": "Removbg",
-      "desc": "免费在线 AI 抠图神器，同时提供 API 和 PS 插件",
-      "links": {
-        "web": "https://www.remove.bg"
-      }
+  },
+  {
+    "title": "I18n locales code",
+    "icon": "fas fa-language",
+    "desc": "翻译时对应的 code",
+    "tags": ["development"],
+    "links": {
+      "web": "https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
     }
-  ],
-  "other": [
-    {
-      "title": "VectorLogoZone",
-      "links": {
-        "web": "https://www.vectorlogo.zone"
-      }
-    },
-    {
-      "title": "壁纸网站",
-      "desc": "桌面、手机壁纸在线下载网站/社区",
-      "links": {
-        "web": "https://wall.alphacoders.com/"
-      }
+  },
+  {
+    "title": "今日诗词 API",
+    "desc": "诗词实时智能推荐 - 一言 API",
+    "tags": ["development"],
+    "links": {
+      "web": "https://www.jinrishici.com"
     }
-  ]
-}
+  },
+  {
+    "title": "Everything",
+    "desc": "小巧，快速的搜索工具",
+    "tags": ["software"],
+    "links": {
+      "web": "https://voidtools.com"
+    }
+  },
+  {
+    "title": "Rufus",
+    "desc": "小巧的 U 盘启动，引导制作工具",
+    "tags": ["software"],
+    "links": {
+      "git": "https://github.com/pbatard/rufus",
+      "web": "https://rufus.ie"
+    }
+  },
+  {
+    "title": "OBS 直播工具",
+    "desc": "开源直播工具",
+    "tags": ["software"],
+    "links": {
+      "web": "https://obsproject.com/"
+    }
+  },
+  {
+    "title": "Cloc",
+    "icon": "fas fa-tools",
+    "desc": "统计代码行数的工具",
+    "tags": ["software"],
+    "links": {
+      "git": "https://github.com/AlDanial/cloc"
+    }
+  },
+  {
+    "title": "百度脑图",
+    "desc": "百度良心软件，在线脑图工具",
+    "tags": ["online-tools"],
+    "links": {
+      "web": "http://naotu.baidu.com/"
+    }
+  },
+  {
+    "title": "Figma",
+    "desc": "在线原型设计工具",
+    "tags": ["online-tools"],
+    "links": {
+      "web": "https://www.figma.com"
+    }
+  },
+  {
+    "title": "Squoosh",
+    "desc": "Web 技术图片压缩工具",
+    "tags": ["online-tools"],
+    "links": {
+      "web": "https://squoosh.app/"
+    }
+  },
+  {
+    "title": "Removbg",
+    "desc": "免费在线 AI 抠图神器，同时提供 API 和 PS 插件",
+    "tags": ["online-tools"],
+    "links": {
+      "web": "https://www.remove.bg"
+    }
+  },
+  {
+    "title": "VectorLogoZone",
+    "desc": "图标库",
+    "tags": ["other"],
+    "links": {
+      "web": "https://www.vectorlogo.zone"
+    }
+  },
+  {
+    "title": "壁纸网站",
+    "desc": "桌面、手机壁纸在线下载网站/社区",
+    "tags": ["other"],
+    "links": {
+      "web": "https://wall.alphacoders.com/"
+    }
+  }
+]

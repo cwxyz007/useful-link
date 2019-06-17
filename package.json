@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "axios": "^0.18.1",
+    "fuse.js": "^3.4.5",
     "jinrishici": "^1.0.6",
     "nprogress": "^0.2.0",
     "preact": "^8.4.2",

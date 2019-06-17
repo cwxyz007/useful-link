@@ -8,28 +8,6 @@
       "addr": "https://github.com/cwxyz007/useful-link/blob/master/configs/navigation.json"
     }
   },
-  "categories": {
-    "development": {
-      "title": "开发工具",
-      "bgColor": "#FFFACE",
-      "icon": "fas fa-code"
-    },
-    "online-tools": {
-      "title": "在线工具",
-      "bgColor": "#ADCCD9",
-      "icon": "fas fa-tools"
-    },
-    "other": {
-      "title": "其它",
-      "bgColor": "#FBC3C8",
-      "icon": "fas fa-archive"
-    },
-    "software": {
-      "title": "软件分享",
-      "bgColor": "#CEF2FF",
-      "icon": "fas fa-th"
-    }
-  },
   "navigation": {
     "icons": {
       "web": "fas fa-external-link-alt",
