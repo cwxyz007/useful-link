@@ -1,27 +1,30 @@
 import { h } from 'preact'
 
-export default function Categories ({ items, site, selectCategory, selectedCategory }) {
+/**
+ *
+ * @param {object} param0
+ * @param {import('./define').ShareItem[]} param0.items
+ */
+export default function Categories ({ items, selectCategory, selectedCategory }) {
   return (
     <div className="categories">
-      {items.map((category) => {
-        const categoryConfig = site.categories[category] || {}
+      {items.map((item) => {
+        const icon = item.icon
 
-        const name = categoryConfig.title || category
-        const icon = categoryConfig.icon
         const classes = ['category-btn']
 
-        const isSelect = selectedCategory === category
+        const isSelect = selectedCategory === item.title
         if (isSelect) classes.push('category-btn__selected')
 
         return (
           <button
-            style={{ backgroundColor: categoryConfig.bgColor }}
+            style={{ backgroundColor: item.bgColor }}
             className={classes.join(' ')}
-            key={category}
-            onClick={() => selectCategory(category)}
+            key={item.title}
+            onClick={() => selectCategory(item.title)}
           >
             {icon && <i className={`category-btn__icon ${icon}`} />}
-            {name}
+            {item.title}
           </button>
         )
       })}

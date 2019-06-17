@@ -1,10 +1,10 @@
 import { h, render, Component } from 'preact'
 import './style.less'
 import NProgress from 'nprogress'
-import { getSiteConfigs, getNavigationData } from './configs'
 import Categories from './Categories'
 import Navigation from './Navigation'
 import { shiciCache } from './utils'
+import configUtils from './configs'
 
 NProgress.configure({
   showSpinner: false
@@ -16,10 +16,18 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
+      /**
+       * @type {import('./define').SiteConfig}
+       */
       site: null,
+      /**
+       * @type {string}
+       */
       selectedCategory: null,
+      /**
+       * @type {import('./define').Category[]}
+       */
       categories: [],
-      navigation: {},
       shiCi: {}
     }
 
@@ -43,40 +51,40 @@ class App extends Component {
 
   async init () {
     NProgress.start()
-    const siteConfigs = await getSiteConfigs()
-    NProgress.set(0.4)
-    const navigation = await getNavigationData()
-    NProgress.set(0.6)
-    const categories = Object.keys(navigation)
+    await configUtils.fetchData()
+
+    const siteConfigs = configUtils.site
+    const categories = configUtils.categories
+    const selectedCategory = localStorage.getItem(selectCategoryKey)
+    const selectedCategoryItem =
+      configUtils.categories.find((c) => c.title === selectedCategory) || configUtils.categories[0]
 
     this.setState({
       site: siteConfigs,
-      navigation,
       categories,
-      selectedCategory: localStorage.getItem(selectCategoryKey) || categories[0]
+      selectedCategory: selectedCategoryItem.title
     })
 
     NProgress.done()
   }
 
   render () {
-    const { site, navigation, selectedCategory, categories, shiCi } = this.state
+    const { site, selectedCategory, categories, shiCi } = this.state
 
     if (!site) {
       return <div />
     }
 
-    const bgColor = (site.categories[selectedCategory] || {}).bgColor
+    const selectedCategoryItem = categories.find((c) => c.title === selectedCategory)
 
-    const items = navigation[selectedCategory]
+    const bgColor = selectedCategoryItem.bgColor
+
+    const items = configUtils.getItemsByTags(selectedCategoryItem.tags)
 
     const shiCiContent = shiCi && `${shiCi.content} 一一 ${shiCi.origin.author}`
     return (
       <div className="app">
-        <div
-          className="header header-img"
-          style={{ backgroundImage: `url(${site.header.bgImg})` }}
-        >
+        <div className="header header-img" style={{ backgroundImage: `url(${site.header.bgImg})` }}>
           <span
             className="header-title ab-v-center"
             style={{
