@@ -34,12 +34,12 @@ const shiciCache = {
 
 /**
  *
- * @param {Function[]} funcs
+ * @param {string[]} funcs
  * @param {*} context
  */
 function bindAll (funcs, context) {
   funcs.forEach((func) => {
-    context[func.name] = func.bind(context)
+    context[func] = context[func].bind(context)
   })
 }
 

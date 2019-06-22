@@ -42,7 +42,7 @@ class App extends Component {
     this.init()
     this.initJinRiShiCi()
 
-    bindAll([this.selectedCategory, this.handleSearchInput], this)
+    bindAll(['selectedCategory', 'handleSearchInput'], this)
   }
 
   async initJinRiShiCi () {

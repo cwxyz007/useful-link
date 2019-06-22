@@ -10,7 +10,7 @@ export default class SearchBar extends Component {
 
     this.focus = false
 
-    bindAll([this.clearInput, this.handleInput], this)
+    bindAll(['clearInput', 'handleInput'], this)
   }
 
   clearInput () {
