@@ -49,8 +49,19 @@ body,
     width: @width;
   }
 
-  .navigation {
+  .right-box {
     width: calc(100% - @width);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    .navigation {
+      flex: 1;
+    }
+
+    .footer {
+
+    }
   }
 }
 
@@ -252,5 +263,15 @@ body,
         }
       }
     }
+  }
+}
+
+.footer {
+  width: 100%;
+  padding: 0 10px 5px 0;
+  text-align: right;
+
+  &-item {
+
   }
 }

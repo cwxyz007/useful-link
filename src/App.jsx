@@ -7,6 +7,7 @@ import { shiciCache, bindAll } from './utils'
 import configUtils from './configs'
 import SearchBar from './SearchBar'
 import Fuse from 'fuse.js'
+import Footer from './Footer'
 
 NProgress.configure({
   showSpinner: false
@@ -138,7 +139,10 @@ class App extends Component {
             selectCategory={this.selectedCategory}
             selectedCategory={selectedCategory}
           />
-          <Navigation items={items} site={site} bgColor={bgColor} />
+          <div className="right-box" style={{ backgroundColor: bgColor }}>
+            <Navigation items={items} site={site} />
+            <Footer />
+          </div>
         </div>
       </div>
     )

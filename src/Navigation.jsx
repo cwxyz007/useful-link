@@ -48,11 +48,11 @@ function NavigationItem ({ item, site }) {
   )
 }
 
-export default function Navigation ({ items, site, bgColor }) {
+export default function Navigation ({ items, site }) {
   const blankItems = [0, 0, 0, 0, 0]
 
   return (
-    <div className="navigation" style={{ backgroundColor: bgColor }}>
+    <div className="navigation">
       {items.concat(blankItems).map((item, i) => (
         <NavigationItem item={item} key={'navigation' + i} site={site} />
       ))}
