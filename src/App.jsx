@@ -3,8 +3,10 @@ import './style.less'
 import NProgress from 'nprogress'
 import Categories from './Categories'
 import Navigation from './Navigation'
-import { shiciCache } from './utils'
+import { shiciCache, bindAll } from './utils'
 import configUtils from './configs'
+import SearchBar from './SearchBar'
+import Fuse from 'fuse.js'
 
 NProgress.configure({
   showSpinner: false
@@ -16,6 +18,7 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
+      searchText: '',
       /**
        * @type {import('./define').SiteConfig}
        */
@@ -31,9 +34,15 @@ class App extends Component {
       shiCi: {}
     }
 
+    /**
+     * @type {Fuse}
+     */
+    this.fuse = null
+
     this.init()
     this.initJinRiShiCi()
-    this.selectedCategory = this.selectedCategory.bind(this)
+
+    bindAll([this.selectedCategory, this.handleSearchInput], this)
   }
 
   async initJinRiShiCi () {
@@ -44,8 +53,10 @@ class App extends Component {
 
   selectedCategory (category) {
     localStorage.setItem(selectCategoryKey, category)
+
     this.setState({
-      selectedCategory: category
+      selectedCategory: category,
+      searchText: ''
     })
   }
 
@@ -66,10 +77,25 @@ class App extends Component {
     })
 
     NProgress.done()
+    this.fuse = new Fuse(configUtils.items, {
+      shouldSort: true,
+      threshold: 0.6,
+      location: 0,
+      distance: 100,
+      maxPatternLength: 32,
+      minMatchCharLength: 1,
+      keys: ['title', 'links.web', 'tags']
+    })
+  }
+
+  handleSearchInput (text) {
+    this.setState({
+      searchText: text
+    })
   }
 
   render () {
-    const { site, selectedCategory, categories, shiCi } = this.state
+    const { site, selectedCategory, categories, shiCi, searchText } = this.state
 
     if (!site) {
       return <div />
@@ -79,7 +105,7 @@ class App extends Component {
 
     const bgColor = selectedCategoryItem.bgColor
 
-    const items = configUtils.getItemsByTags(selectedCategoryItem.tags)
+    const items = searchText ? this.fuse.search(searchText) : configUtils.getItemsByTags(selectedCategoryItem.tags)
 
     const shiCiContent = shiCi && `${shiCi.content} 一一 ${shiCi.origin.author}`
     return (
@@ -94,6 +120,7 @@ class App extends Component {
           >
             {shiCiContent}
           </span>
+          <SearchBar onChange={this.handleSearchInput} value={searchText} />
           <a
             className="header-add-site"
             rel="noopener noreferrer"

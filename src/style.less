@@ -28,6 +28,7 @@ body,
 }
 
 @header-height: 60px;
+@primary-color: #4cbdff;
 
 .app {
   .header {
@@ -70,6 +71,33 @@ body,
     left: 30px;
   }
 
+  .search {
+    &-bar {
+      position: absolute;
+      right: 100px;
+      background: #ffffff;
+      border: 1px solid gray;
+      padding: 5px;
+
+      &:focus-within {
+        border-color: @primary-color;
+      }
+    }
+
+    &-input,
+    &-btn {
+      background: none;
+      border: none;
+      outline: none;
+    }
+
+    &-btn {
+      &:hover {
+        color: @primary-color;
+      }
+    }
+  }
+
   &-add-site {
     @size: 100px;
     position: absolute;
@@ -78,7 +106,7 @@ body,
     transform: translate(70%, -70%);
     width: @size;
     height: @size;
-    background-color: #4cbdff;
+    background-color: @primary-color;
     border-radius: 50%;
     transition: transform ease 0.2s;
 
