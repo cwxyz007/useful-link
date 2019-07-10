@@ -91,6 +91,14 @@
     }
   },
   {
+    "title": "TinyPNG",
+    "desc": "TinyPNG能在完整保留透明度的同时将PNG图片压缩50-80%",
+    "tags": ["online-tools"],
+    "links": {
+      "web": "https://tinypng.com/"
+    }
+  },
+  {
     "title": "Removbg",
     "desc": "免费在线 AI 抠图神器，同时提供 API 和 PS 插件",
     "tags": ["online-tools"],
