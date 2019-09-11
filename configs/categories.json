@@ -12,16 +12,16 @@
     "icon": "fas fa-tools"
   },
   {
-    "tags": ["game", "game-tool"],
-    "title": "游戏",
-    "bgColor": "#edc3fa",
-    "icon": "fas fa-gamepad"
-  },
-  {
     "tags": ["software"],
     "title": "软件分享",
     "bgColor": "#CEF2FF",
     "icon": "fas fa-th"
+  },
+  {
+    "tags": ["game", "game-tool"],
+    "title": "游戏",
+    "bgColor": "#edc3fa",
+    "icon": "fas fa-gamepad"
   },
   {
     "tags": ["other"],
