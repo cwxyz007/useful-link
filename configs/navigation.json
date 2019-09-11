@@ -69,7 +69,7 @@
   {
     "title": "百度脑图",
     "desc": "百度良心软件，在线脑图工具",
-    "tags": ["online-tools"],
+    "tags": ["online-tool"],
     "links": {
       "web": "http://naotu.baidu.com/"
     }
@@ -77,7 +77,7 @@
   {
     "title": "Figma",
     "desc": "在线原型设计工具",
-    "tags": ["online-tools"],
+    "tags": ["online-tool"],
     "links": {
       "web": "https://www.figma.com"
     }
@@ -85,7 +85,7 @@
   {
     "title": "Squoosh",
     "desc": "Web 技术图片压缩工具",
-    "tags": ["online-tools"],
+    "tags": ["online-tool"],
     "links": {
       "web": "https://squoosh.app/"
     }
@@ -93,7 +93,7 @@
   {
     "title": "TinyPNG",
     "desc": "TinyPNG能在完整保留透明度的同时将PNG图片压缩50-80%",
-    "tags": ["online-tools"],
+    "tags": ["online-tool"],
     "links": {
       "web": "https://tinypng.com/"
     }
@@ -101,7 +101,7 @@
   {
     "title": "Removbg",
     "desc": "免费在线 AI 抠图神器，同时提供 API 和 PS 插件",
-    "tags": ["online-tools"],
+    "tags": ["online-tool"],
     "links": {
       "web": "https://www.remove.bg"
     }
@@ -125,9 +125,17 @@
   {
     "title": "FreeLogoDesgin",
     "desc": "方便，简单的免费 Logo 设计网站",
-    "tags": ["online-tools"],
+    "tags": ["online-tool"],
     "links": {
       "web": "https://www.freelogodesign.org/"
+    }
+  },
+  {
+    "title": "SteamGridDB",
+    "desc": "把其他平台的游戏一键导入到 Steam 中",
+    "tags": ["game-tool"],
+    "links": {
+      "web": "https://www.steamgriddb.com/manager"
     }
   }
 ]
