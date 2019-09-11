@@ -1,16 +1,21 @@
 [
   {
-    // include tags
     "tags": ["development"],
     "title": "开发工具",
     "bgColor": "#FFFACE",
     "icon": "fas fa-code"
   },
   {
-    "tags": ["online-tools"],
+    "tags": ["online-tool"],
     "title": "在线工具",
     "bgColor": "#ADCCD9",
     "icon": "fas fa-tools"
+  },
+  {
+    "tags": ["game", "game-tool"],
+    "title": "游戏",
+    "bgColor": "#edc3fa",
+    "icon": "fas fa-gamepad"
   },
   {
     "tags": ["software"],
