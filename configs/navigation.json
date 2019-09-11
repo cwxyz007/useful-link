@@ -147,5 +147,30 @@
       "web": "https://warrior.js.org/",
       "git": "https://github.com/olistic/warriorjs"
     }
+  },
+  {
+    "title": "Regexper",
+    "desc": "正则可视化工具",
+    "tags": ["online-tool"],
+    "links": {
+      "web": "https://regexper.com/",
+      "gitlab": "https://gitlab.com/javallone/regexper-static"
+    }
+  },
+  {
+    "title": "JSON Schema Store",
+    "desc": "JSON Schema 存储仓库",
+    "tags": ["online-tool"],
+    "links": {
+      "web": "http://schemastore.org/json/"
+    }
+  },
+  {
+    "title": "Cemu Emulator",
+    "desc": "Will U 模拟器",
+    "tags": ["game-tool"],
+    "links": {
+      "web": "https://cemu.info/"
+    }
   }
 ]

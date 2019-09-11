@@ -1,4 +1,3 @@
-// colors reference: https://coolors.co/fbc3c8-ffface-e4f9d1-bbf2ed-adccd9
 {
   "header": {
     "bgImg": "https://images8.alphacoders.com/613/613334.jpg",
@@ -11,7 +10,8 @@
   "navigation": {
     "icons": {
       "web": "fas fa-external-link-alt",
-      "git": "fab fa-github"
+      "git": "fab fa-github",
+      "gitlab": "fab fa-gitlab"
     }
   }
 }
