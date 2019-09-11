@@ -135,7 +135,8 @@
     "desc": "把其他平台的游戏一键导入到 Steam 中",
     "tags": ["game-tool"],
     "links": {
-      "web": "https://www.steamgriddb.com/manager"
+      "web": "https://www.steamgriddb.com/manager",
+      "git": "https://github.com/steamgriddb/steamgriddb-manager"
     }
   }
 ]
