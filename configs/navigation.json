@@ -138,5 +138,14 @@
       "web": "https://www.steamgriddb.com/manager",
       "git": "https://github.com/steamgriddb/steamgriddb-manager"
     }
+  },
+  {
+    "title": "WarriorJS",
+    "desc": "用代码玩的冒险游戏",
+    "tags": ["game"],
+    "links": {
+      "web": "https://warrior.js.org/",
+      "git": "https://github.com/olistic/warriorjs"
+    }
   }
 ]
