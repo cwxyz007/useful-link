@@ -85,7 +85,7 @@ class App extends Component {
       distance: 100,
       maxPatternLength: 32,
       minMatchCharLength: 1,
-      keys: ['title', 'links.web', 'tags']
+      keys: ['title', 'desc', 'links.web', 'tags']
     })
   }
 
