@@ -108,7 +108,10 @@ class App extends Component {
 
     const items = searchText ? this.fuse.search(searchText) : configUtils.getItemsByTags(selectedCategoryItem.tags)
 
-    const shiCiContent = shiCi && `${shiCi.content} 一一 ${shiCi.origin.author}`
+    const shiCiTitle = shiCi && shiCi.origin.title
+    const shiCiContent = shiCi && `${shiCi.content} 一一 ${shiCiTitle}(${shiCi.origin.author})`
+    const hanyuLink = 'https://hanyu.baidu.com/s?wd=' + shiCiTitle
+
     return (
       <div className="app">
         <div className="header header-img" style={{ backgroundImage: `url(${site.header.bgImg})` }}>
@@ -120,6 +123,9 @@ class App extends Component {
             }}
           >
             {shiCiContent}
+            <a className="navigation-item__link" target="_blank" href={hanyuLink} rel="noopener noreferrer">
+              <i style={{ marginLeft: 10 }} className="fas fa-external-link-alt icon" />
+            </a>
           </span>
           <SearchBar onChange={this.handleSearchInput} value={searchText} />
           <a
