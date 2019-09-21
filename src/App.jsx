@@ -110,7 +110,7 @@ class App extends Component {
 
     const shiCiTitle = shiCi && shiCi.origin.title
     const shiCiContent = shiCi && `${shiCi.content} 一一 ${shiCiTitle}(${shiCi.origin.author})`
-    const hanyuLink = 'https://hanyu.baidu.com/s?wd=' + shiCiTitle
+    const hanyuLink = encodeURI(`https://hanyu.baidu.com/s?wd=${shiCiTitle} ${shiCi.origin.author}`)
 
     return (
       <div className="app">
