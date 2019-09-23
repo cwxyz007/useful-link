@@ -172,5 +172,13 @@
     "links": {
       "web": "https://cemu.info/"
     }
+  },
+  {
+    "title": "HashTab",
+    "desc": "右键，属性，hashtab，直接对比 MD5、SHA-1 值",
+    "tags": ["software"],
+    "links": {
+      "web": "http://implbits.com/products/hashtab/"
+    }
   }
 ]
