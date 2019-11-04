@@ -180,5 +180,14 @@
     "links": {
       "web": "http://implbits.com/products/hashtab/"
     }
+  },
+  {
+    "title": "Hand Brake",
+    "desc": "开源免费视频转码软件，支持几乎所有格式",
+    "tags": ["software"],
+    "links": {
+      "web": "https://handbrake.fr/",
+      "git": "https://github.com/HandBrake/HandBrake"
+    }
   }
 ]
