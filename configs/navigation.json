@@ -189,5 +189,14 @@
       "web": "https://handbrake.fr/",
       "git": "https://github.com/HandBrake/HandBrake"
     }
+  },
+  {
+    "title": "Screen To Gif",
+    "desc": "开源免费录制编辑 Gif 的软件",
+    "tags": ["software"],
+    "links": {
+      "web": "https://www.screentogif.com/",
+      "git": "https://github.com/NickeManarin/ScreenToGif/"
+    }
   }
 ]
