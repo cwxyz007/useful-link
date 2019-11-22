@@ -198,5 +198,13 @@
       "web": "https://www.screentogif.com/",
       "git": "https://github.com/NickeManarin/ScreenToGif/"
     }
+  },
+  {
+    "title": "Snipaste",
+    "desc": "免费且功能强大的截图软件",
+    "tags": ["software"],
+    "links": {
+      "web": "https://www.snipaste.com/"
+    }
   }
 ]
