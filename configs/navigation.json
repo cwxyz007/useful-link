@@ -206,5 +206,13 @@
     "links": {
       "web": "https://www.snipaste.com/"
     }
+  },
+  {
+    "title": "ManicTime",
+    "desc": "全平台记录使用应用时间的软件，基础版免费",
+    "tags": ["software"],
+    "links": {
+      "web": "https://www.manictime.com/"
+    }
   }
 ]
