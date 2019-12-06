@@ -1,7 +1,6 @@
 {
   "name": "useful-links",
   "version": "0.1.7",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --env.NODE_ENV=development",
