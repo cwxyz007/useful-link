@@ -23,15 +23,15 @@ class ConfigUtils {
     /**
      * @type {import('./define').SiteConfig}
      */
-    this.site = null
+    this.site = {}
     /**
      * @type {import('./define').Category[]}
      */
-    this.categories = null
+    this.categories = []
     /**
      * @type {import('./define').ShareItem[]}
      */
-    this.items = null
+    this.items = []
 
     /**
      * @type {string[]}

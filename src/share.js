@@ -31,5 +31,7 @@ function removeActiveState () {
   }
 }
 
-window.addEventListener('load', checkSharedTitle)
-window.addEventListener('click', removeActiveState)
+export function initShare () {
+  window.addEventListener('load', checkSharedTitle)
+  window.addEventListener('click', removeActiveState)
+}

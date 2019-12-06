@@ -8,7 +8,7 @@ import configUtils from './configs'
 import SearchBar from './SearchBar'
 import Fuse from 'fuse.js'
 import Footer from './Footer'
-import './share'
+import { initShare } from './share'
 
 NProgress.configure({
   showSpinner: false
@@ -65,6 +65,7 @@ class App extends Component {
   async init () {
     NProgress.start()
     await configUtils.fetchData()
+    initShare()
 
     const siteConfigs = configUtils.site
     const categories = configUtils.categories
