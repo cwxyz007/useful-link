@@ -30,6 +30,11 @@ body,
 @header-height: 60px;
 @primary-color: #4cbdff;
 
+.plain-url {
+  color: inherit;
+  text-decoration: none;
+}
+
 .app {
   .header {
     height: @header-height;
@@ -54,14 +59,13 @@ body,
     overflow: auto;
     display: flex;
     flex-direction: column;
-    transition: .4s;
+    transition: 0.4s;
 
     .navigation {
       flex: 1;
     }
 
     .footer {
-
     }
   }
 }
@@ -209,6 +213,24 @@ body,
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
+    &.active {
+      @shadow-color:  rgba(255, 0, 0, 0.575);
+      box-shadow: 0 0 20px @shadow-color;
+      animation: hover 1.5s ease-in-out infinite;
+
+      @keyframes hover {
+        0% {
+          box-shadow: 0 0 5px @shadow-color;
+        }
+        50% {
+          box-shadow: 0 0 20px @shadow-color;
+        }
+        100% {
+          box-shadow: 0 0 5px @shadow-color;
+        }
+      }
+    }
+
     &__body {
       height: calc(100% - @footer-height);
       display: flex;
@@ -274,6 +296,5 @@ body,
   text-align: right;
 
   &-item {
-
   }
 }

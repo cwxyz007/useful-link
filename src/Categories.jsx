@@ -18,6 +18,7 @@ export default function Categories ({ items, selectCategory, selectedCategory })
 
         return (
           <button
+            id={item.title}
             style={{ backgroundColor: item.bgColor }}
             className={classes.join(' ')}
             key={item.title}

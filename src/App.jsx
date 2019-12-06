@@ -8,6 +8,7 @@ import configUtils from './configs'
 import SearchBar from './SearchBar'
 import Fuse from 'fuse.js'
 import Footer from './Footer'
+import './share'
 
 NProgress.configure({
   showSpinner: false

@@ -33,13 +33,19 @@ function NavigationItem ({ item, site }) {
     return <FooterLink url={url} key={item.title + url} icon={faIcon} />
   })
 
+  const changeUrlToShare = () => {
+    history.pushState({}, '', `/?title=${item.title}`)
+  }
+
+  const homeUrl = (item.links || {}).web
+
   return (
-    <div className="navigation-item">
+    <div className="navigation-item" id={item.title} onClick={changeUrlToShare}>
       <div className="navigation-item__body">
-        <div className="flex-v-center">
-          <Favicon icon={item.icon} homeUrl={(item.links || {}).web} />
+        <a className="flex-v-center plain-url" href={homeUrl} title={homeUrl} rel="noopener noreferrer" target="_blank">
+          <Favicon icon={item.icon} homeUrl={homeUrl} />
           <span className="navigation-item__title">{item.title}</span>
-        </div>
+        </a>
         <p className="navigation-item__description">{item.desc}</p>
       </div>
       <div className="navigation-item__divider" />
