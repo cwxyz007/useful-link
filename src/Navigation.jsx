@@ -34,7 +34,10 @@ function NavigationItem ({ item, site }) {
   })
 
   const changeUrlToShare = () => {
-    history.pushState({}, '', `/?title=${item.title}`)
+    const url = new URL(location.href)
+    url.searchParams.set('title', item.title)
+
+    history.replaceState(null, null, url.href)
   }
 
   const homeUrl = (item.links || {}).web
