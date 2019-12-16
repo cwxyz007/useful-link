@@ -214,5 +214,13 @@
     "links": {
       "web": "https://www.manictime.com/"
     }
+  },
+  {
+    "title": "aText",
+    "desc": "非常方便的预定制文本输入工具",
+    "tags": ["software"],
+    "links": {
+      "web": "https://trankynam.com/atext/"
+    }
   }
 ]
