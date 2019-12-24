@@ -162,7 +162,8 @@
     "desc": "JSON Schema 存储仓库",
     "tags": ["online-tool"],
     "links": {
-      "web": "http://schemastore.org/json/"
+      "web": "http://schemastore.org/json/",
+      "git": "https://github.com/schemastore/schemastore/"
     }
   },
   {
