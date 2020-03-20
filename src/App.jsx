@@ -167,7 +167,11 @@ class App extends Component {
             selectedCategory={selectedCategory}
           />
           <div className="right-box" style={{ backgroundColor: bgColor }}>
-            <Navigation items={items} site={site} />
+            <Navigation
+              items={items}
+              site={site}
+              onClickItem={tag => this.handleSearchInput(tag)}
+            />
             <Footer />
           </div>
         </div>

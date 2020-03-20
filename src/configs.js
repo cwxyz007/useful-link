@@ -56,7 +56,7 @@ class ConfigUtils {
 
     const len = data.length
     for (const idx in data) {
-      data[idx].bgColor = Color.hsv((360 / len) * idx, 19, 100).toString()
+      data[idx].bgColor = Color.hsv((360 / len) * idx, 40, 100).toString()
     }
 
     return data
@@ -92,7 +92,7 @@ class ConfigUtils {
     this.items.forEach(item => {
       item.tags.forEach(t => {
         if (tags.includes(t) || tags.includes('*')) {
-          items.push(item)
+          !items.includes(item) && items.push(item)
         }
       })
     })

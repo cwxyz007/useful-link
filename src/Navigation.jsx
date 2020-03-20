@@ -4,7 +4,7 @@ import configUtils from './configs'
 function FooterLink({ url, icon }) {
   return (
     <a
-      className="navigation-item__link"
+      className="navigation-item__link alias"
       title={url}
       href={url}
       rel="noopener noreferrer"
@@ -27,7 +27,7 @@ function Favicon({ icon, homeUrl }) {
   )
 }
 
-function NavigationItem({ item, site }) {
+function NavigationItem({ item, site, onClick }) {
   // placeholder empty item
   if (item === 0) {
     return <div className="navigation-item" style={{ opacity: 0 }} />
@@ -52,10 +52,14 @@ function NavigationItem({ item, site }) {
   const homeUrl = (item.links || {}).href
 
   const $tags = item.tags.map(item => (
-    <i
+    <a
       key={item}
-      className={configUtils.getIconClass(item) + ' navigation-item__tag'}
-    ></i>
+      title={item}
+      className="navigation-item__tag navigation-item__link"
+      onClick={e => onClick(item, e)}
+    >
+      <i className={configUtils.getIconClass(item) + ' icon'}></i>
+    </a>
   ))
 
   return (
@@ -82,13 +86,22 @@ function NavigationItem({ item, site }) {
   )
 }
 
-export default function Navigation({ items, site }) {
+export default function Navigation({ items, site, onClickItem }) {
   const blankItems = [0, 0, 0, 0, 0]
+
+  function clickItem(tag, e) {
+    onClickItem(tag, e)
+  }
 
   return (
     <div className="navigation">
       {items.concat(blankItems).map((item, i) => (
-        <NavigationItem item={item} key={'navigation' + i} site={site} />
+        <NavigationItem
+          onClick={clickItem}
+          item={item}
+          key={'navigation' + i}
+          site={site}
+        />
       ))}
     </div>
   )
