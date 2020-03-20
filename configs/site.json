@@ -7,11 +7,27 @@
       "addr": "https://github.com/cwxyz007/useful-link/blob/master/configs/navigation.json"
     }
   },
-  "navigation": {
-    "icons": {
-      "web": "fas fa-external-link-alt",
-      "git": "fab fa-github",
-      "gitlab": "fab fa-gitlab"
-    }
+  "icons": {
+    "href": "fas fa-external-link-alt",
+    "git": "fab fa-github",
+    "gitlab": "fab fa-gitlab",
+
+    "grid": "fas fa-th",
+    "game": "fas fa-gamepad",
+    "tool": "fas fa-tools",
+    "web": "fas fa-globe",
+    "win": "fab fa-windows",
+    "mac": "fab fa-apple",
+    "linux": "fab fa-linux",
+    "archive": "fas fa-archive",
+
+    "image": "fas fa-image",
+    "gif": "fas fa-image",
+    "wallpaper": "fas fa-image",
+    "icon": "fas fa-image",
+    "logo": "fas fa-image",
+
+    "video": "fab fa-youtube",
+    "code": "fas fa-code"
   }
 }

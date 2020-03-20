@@ -1,32 +1,42 @@
 [
   {
-    "tags": ["development"],
+    "tags": ["*"],
+    "title": "所有",
+    "icon": "grid"
+  },
+  {
+    "tags": ["code"],
     "title": "开发工具",
-    "bgColor": "#FFFACE",
-    "icon": "fas fa-code"
+    "icon": "code"
   },
   {
-    "tags": ["online-tool"],
+    "tags": ["web"],
     "title": "在线工具",
-    "bgColor": "#ADCCD9",
-    "icon": "fas fa-tools"
+    "icon": "web"
   },
   {
-    "tags": ["software"],
-    "title": "软件分享",
-    "bgColor": "#CEF2FF",
-    "icon": "fas fa-th"
-  },
-  {
-    "tags": ["game", "game-tool"],
+    "tags": ["game"],
     "title": "游戏",
-    "bgColor": "#edc3fa",
-    "icon": "fas fa-gamepad"
+    "icon": "game"
+  },
+  {
+    "tags": ["win"],
+    "title": "win 软件",
+    "icon": "win"
+  },
+  {
+    "tags": ["mac"],
+    "title": "mac 软件",
+    "icon": "mac"
+  },
+  {
+    "tags": ["linux"],
+    "title": "linux 软件",
+    "icon": "linux"
   },
   {
     "tags": ["other"],
     "title": "其它",
-    "bgColor": "#FBC3C8",
-    "icon": "fas fa-archive"
+    "icon": "archive"
   }
 ]

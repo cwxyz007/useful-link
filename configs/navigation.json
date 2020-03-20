@@ -2,66 +2,66 @@
   {
     "title": "Github",
     "desc": "全球 Git 分布式存储仓库",
-    "tags": ["development"],
+    "tags": ["code"],
     "links": {
-      "web": "https://www.github.com"
+      "href": "https://www.github.com"
     }
   },
   {
     "title": "Material CSS Kit",
     "desc": "Materialize 风格的样式组件",
-    "tags": ["development"],
+    "tags": ["code"],
     "links": {
-      "web": "https://materializecss.com/"
+      "href": "https://materializecss.com/"
     }
   },
   {
     "title": "I18n locales code",
     "icon": "fas fa-language",
     "desc": "翻译时对应的 code",
-    "tags": ["development"],
+    "tags": ["code"],
     "links": {
-      "web": "https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
+      "href": "https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
     }
   },
   {
     "title": "今日诗词 API",
     "desc": "诗词实时智能推荐 - 一言 API",
-    "tags": ["development"],
+    "tags": ["code"],
     "links": {
-      "web": "https://www.jinrishici.com"
+      "href": "https://www.jinrishici.com"
     }
   },
   {
     "title": "Everything",
     "desc": "小巧，快速的搜索工具",
-    "tags": ["software"],
+    "tags": ["win"],
     "links": {
-      "web": "https://voidtools.com"
+      "href": "https://voidtools.com"
     }
   },
   {
     "title": "Rufus",
     "desc": "小巧的 U 盘启动，引导制作工具",
-    "tags": ["software"],
+    "tags": ["win"],
     "links": {
       "git": "https://github.com/pbatard/rufus",
-      "web": "https://rufus.ie"
+      "href": "https://rufus.ie"
     }
   },
   {
     "title": "OBS 直播工具",
     "desc": "开源直播工具",
-    "tags": ["software"],
+    "tags": ["win", "mac", "linux"],
     "links": {
-      "web": "https://obsproject.com/"
+      "href": "https://obsproject.com/"
     }
   },
   {
     "title": "Cloc",
     "icon": "fas fa-tools",
     "desc": "统计代码行数的工具",
-    "tags": ["software"],
+    "tags": ["win", "mac", "linux"],
     "links": {
       "git": "https://github.com/AlDanial/cloc"
     }
@@ -69,73 +69,73 @@
   {
     "title": "百度脑图",
     "desc": "百度良心软件，在线脑图工具",
-    "tags": ["online-tool"],
+    "tags": ["web"],
     "links": {
-      "web": "http://naotu.baidu.com/"
+      "href": "http://naotu.baidu.com/"
     }
   },
   {
     "title": "Figma",
     "desc": "在线原型设计工具",
-    "tags": ["online-tool"],
+    "tags": ["web"],
     "links": {
-      "web": "https://www.figma.com"
+      "href": "https://www.figma.com"
     }
   },
   {
     "title": "Squoosh",
     "desc": "Web 技术图片压缩工具",
-    "tags": ["online-tool"],
+    "tags": ["web"],
     "links": {
-      "web": "https://squoosh.app/"
+      "href": "https://squoosh.app/"
     }
   },
   {
     "title": "TinyPNG",
     "desc": "TinyPNG能在完整保留透明度的同时将PNG图片压缩50-80%",
-    "tags": ["online-tool"],
+    "tags": ["web", "image"],
     "links": {
-      "web": "https://tinypng.com/"
+      "href": "https://tinypng.com/"
     }
   },
   {
     "title": "Removbg",
     "desc": "免费在线 AI 抠图神器，同时提供 API 和 PS 插件",
-    "tags": ["online-tool"],
+    "tags": ["web", "image"],
     "links": {
-      "web": "https://www.remove.bg"
+      "href": "https://www.remove.bg"
     }
   },
   {
     "title": "VectorLogoZone",
     "desc": "图标库",
-    "tags": ["other"],
+    "tags": ["web", "icon"],
     "links": {
-      "web": "https://www.vectorlogo.zone"
+      "href": "https://www.vectorlogo.zone"
     }
   },
   {
     "title": "壁纸网站",
     "desc": "桌面、手机壁纸在线下载网站/社区",
-    "tags": ["other"],
+    "tags": ["web", "wallpaper"],
     "links": {
-      "web": "https://wall.alphacoders.com/"
+      "href": "https://wall.alphacoders.com/"
     }
   },
   {
     "title": "FreeLogoDesgin",
     "desc": "方便，简单的免费 Logo 设计网站",
-    "tags": ["online-tool"],
+    "tags": ["web", "logo"],
     "links": {
-      "web": "https://www.freelogodesign.org/"
+      "href": "https://www.freelogodesign.org/"
     }
   },
   {
     "title": "SteamGridDB",
     "desc": "把其他平台的游戏一键导入到 Steam 中",
-    "tags": ["game-tool"],
+    "tags": ["game", "tool"],
     "links": {
-      "web": "https://www.steamgriddb.com/manager",
+      "href": "https://www.steamgriddb.com/manager",
       "git": "https://github.com/steamgriddb/steamgriddb-manager"
     }
   },
@@ -144,84 +144,84 @@
     "desc": "用代码玩的冒险游戏",
     "tags": ["game"],
     "links": {
-      "web": "https://warrior.js.org/",
+      "href": "https://warrior.js.org/",
       "git": "https://github.com/olistic/warriorjs"
     }
   },
   {
     "title": "Regexper",
     "desc": "正则可视化工具",
-    "tags": ["online-tool"],
+    "tags": ["web"],
     "links": {
-      "web": "https://regexper.com/",
+      "href": "https://regexper.com/",
       "gitlab": "https://gitlab.com/javallone/regexper-static"
     }
   },
   {
     "title": "JSON Schema Store",
     "desc": "JSON Schema 存储仓库",
-    "tags": ["online-tool"],
+    "tags": ["web"],
     "links": {
-      "web": "http://schemastore.org/json/",
+      "href": "http://schemastore.org/json/",
       "git": "https://github.com/schemastore/schemastore/"
     }
   },
   {
     "title": "Cemu Emulator",
     "desc": "Will U 模拟器",
-    "tags": ["game-tool"],
+    "tags": ["game", "tool"],
     "links": {
-      "web": "https://cemu.info/"
+      "href": "https://cemu.info/"
     }
   },
   {
     "title": "HashTab",
     "desc": "右键，属性，hashtab，直接对比 MD5、SHA-1 值",
-    "tags": ["software"],
+    "tags": ["win"],
     "links": {
-      "web": "http://implbits.com/products/hashtab/"
+      "href": "http://implbits.com/products/hashtab/"
     }
   },
   {
     "title": "Hand Brake",
     "desc": "开源免费视频转码软件，支持几乎所有格式",
-    "tags": ["software"],
+    "tags": ["win", "mac", "linux", "video"],
     "links": {
-      "web": "https://handbrake.fr/",
+      "href": "https://handbrake.fr/",
       "git": "https://github.com/HandBrake/HandBrake"
     }
   },
   {
     "title": "Screen To Gif",
     "desc": "开源免费录制编辑 Gif 的软件",
-    "tags": ["software"],
+    "tags": ["win", "gif"],
     "links": {
-      "web": "https://www.screentogif.com/",
+      "href": "https://www.screentogif.com/",
       "git": "https://github.com/NickeManarin/ScreenToGif/"
     }
   },
   {
     "title": "Snipaste",
     "desc": "免费且功能强大的截图软件",
-    "tags": ["software"],
+    "tags": ["win", "mac", "linux"],
     "links": {
-      "web": "https://www.snipaste.com/"
+      "href": "https://www.snipaste.com/"
     }
   },
   {
     "title": "ManicTime",
     "desc": "全平台记录使用应用时间的软件，基础版免费",
-    "tags": ["software"],
+    "tags": ["win", "mac", "linux"],
     "links": {
-      "web": "https://www.manictime.com/"
+      "href": "https://www.manictime.com/"
     }
   },
   {
     "title": "aText",
     "desc": "非常方便的预定制文本输入工具",
-    "tags": ["software"],
+    "tags": ["win", "mac"],
     "links": {
-      "web": "https://trankynam.com/atext/"
+      "href": "https://trankynam.com/atext/"
     }
   }
 ]

@@ -17,7 +17,7 @@ NProgress.configure({
 const selectCategoryKey = 'category'
 
 class App extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       searchText: '',
@@ -47,13 +47,13 @@ class App extends Component {
     bindAll(['selectedCategory', 'handleSearchInput'], this)
   }
 
-  async initJinRiShiCi () {
+  async initJinRiShiCi() {
     this.setState({
       shiCi: await shiciCache.get()
     })
   }
 
-  selectedCategory (category) {
+  selectedCategory(category) {
     localStorage.setItem(selectCategoryKey, category)
 
     this.setState({
@@ -62,7 +62,7 @@ class App extends Component {
     })
   }
 
-  async init () {
+  async init() {
     NProgress.start()
     await configUtils.fetchData()
     initShare()
@@ -71,7 +71,8 @@ class App extends Component {
     const categories = configUtils.categories
     const selectedCategory = localStorage.getItem(selectCategoryKey)
     const selectedCategoryItem =
-      configUtils.categories.find((c) => c.title === selectedCategory) || configUtils.categories[0]
+      configUtils.categories.find(c => c.title === selectedCategory) ||
+      configUtils.categories[0]
 
     this.setState({
       site: siteConfigs,
@@ -91,32 +92,42 @@ class App extends Component {
     })
   }
 
-  handleSearchInput (text) {
+  handleSearchInput(text) {
     this.setState({
       searchText: text
     })
   }
 
-  render () {
+  render() {
     const { site, selectedCategory, categories, shiCi, searchText } = this.state
 
     if (!site) {
       return <div />
     }
 
-    const selectedCategoryItem = categories.find((c) => c.title === selectedCategory)
+    const selectedCategoryItem = categories.find(
+      c => c.title === selectedCategory
+    )
 
     const bgColor = selectedCategoryItem.bgColor
 
-    const items = searchText ? this.fuse.search(searchText) : configUtils.getItemsByTags(selectedCategoryItem.tags)
+    const items = searchText
+      ? this.fuse.search(searchText)
+      : configUtils.getItemsByTags(selectedCategoryItem.tags)
 
     const shiCiTitle = shiCi && shiCi.origin.title
-    const shiCiContent = shiCi && `${shiCi.content} 一一 ${shiCiTitle}(${shiCi.origin.author})`
-    const hanyuLink = encodeURI(`https://hanyu.baidu.com/s?wd=${shiCiTitle} ${shiCi.origin.author}`)
+    const shiCiContent =
+      shiCi && `${shiCi.content} 一一 ${shiCiTitle}(${shiCi.origin.author})`
+    const hanyuLink = encodeURI(
+      `https://hanyu.baidu.com/s?wd=${shiCiTitle} ${shiCi.origin.author}`
+    )
 
     return (
       <div className="app">
-        <div className="header header-img" style={{ backgroundImage: `url(${site.header.bgImg})` }}>
+        <div
+          className="header header-img"
+          style={{ backgroundImage: `url(${site.header.bgImg})` }}
+        >
           <span
             className="header-title ab-v-center"
             style={{
@@ -125,8 +136,16 @@ class App extends Component {
             }}
           >
             {shiCiContent}
-            <a className="navigation-item__link" target="_blank" href={hanyuLink} rel="noopener noreferrer">
-              <i style={{ marginLeft: 10 }} className="fas fa-external-link-alt icon" />
+            <a
+              className="navigation-item__link"
+              target="_blank"
+              href={hanyuLink}
+              rel="noopener noreferrer"
+            >
+              <i
+                style={{ marginLeft: 10 }}
+                className="fas fa-external-link-alt icon"
+              />
             </a>
           </span>
           <SearchBar onChange={this.handleSearchInput} value={searchText} />

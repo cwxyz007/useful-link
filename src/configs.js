@@ -1,11 +1,12 @@
 import stripJsonComments from 'strip-json-comments'
+import Color from 'color'
 import NProgress from 'nprogress'
 
 /**
  *
  * @param {string} data
  */
-function parseJsonWithComment (data) {
+function parseJsonWithComment(data) {
   if (typeof data !== 'string') {
     return data
   }
@@ -13,13 +14,13 @@ function parseJsonWithComment (data) {
   return JSON.parse(stripJsonComments(data))
 }
 
-async function get (url) {
+async function get(url) {
   const data = await fetch(url)
   return data.text()
 }
 
 class ConfigUtils {
-  constructor () {
+  constructor() {
     /**
      * @type {import('./define').SiteConfig}
      */
@@ -39,22 +40,29 @@ class ConfigUtils {
     this.tags = []
   }
 
-  async _getSiteConfigs () {
+  async _getSiteConfigs() {
     const data = await get('./configs/site.json')
     return parseJsonWithComment(data)
   }
 
-  async _getNavigationData () {
+  async _getNavigationData() {
     const data = await get('./configs/navigation.json')
     return parseJsonWithComment(data)
   }
 
-  async _getCategoriesData () {
-    const data = await get('./configs/categories.json')
-    return parseJsonWithComment(data)
+  async _getCategoriesData() {
+    let data = await get('./configs/categories.json')
+    data = await parseJsonWithComment(data)
+
+    const len = data.length
+    for (const idx in data) {
+      data[idx].bgColor = Color.hsv((360 / len) * idx, 19, 100).toString()
+    }
+
+    return data
   }
 
-  async fetchData () {
+  async fetchData() {
     this.site = await this._getSiteConfigs()
     NProgress.set(0.3)
     this.categories = await this._getCategoriesData()
@@ -65,9 +73,9 @@ class ConfigUtils {
     this._cacheTags()
   }
 
-  _cacheTags () {
-    this.items.forEach((item) => {
-      item.tags.forEach((t) => {
+  _cacheTags() {
+    this.items.forEach(item => {
+      item.tags.forEach(t => {
         if (!this.tags.includes(t)) {
           this.tags.push(t)
         }
@@ -79,17 +87,25 @@ class ConfigUtils {
    *
    * @param {string[]} tags
    */
-  getItemsByTags (tags) {
+  getItemsByTags(tags) {
     const items = []
-    this.items.forEach((item) => {
-      item.tags.forEach((t) => {
-        if (tags.includes(t)) {
+    this.items.forEach(item => {
+      item.tags.forEach(t => {
+        if (tags.includes(t) || tags.includes('*')) {
           items.push(item)
         }
       })
     })
 
     return items
+  }
+
+  /**
+   *
+   * @param {string} name
+   */
+  getIconClass(name) {
+    return this.site.icons[name]
   }
 }
 

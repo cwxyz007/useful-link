@@ -145,22 +145,21 @@ body,
 
 .categories {
   @border-width: 1px;
-  padding: 50px 0 0 50px;
   border-right: @border-width solid rgba(0, 0, 0, 0.1);
 
   .category {
+    width: 200px;
     &-btn {
       position: relative;
       box-sizing: border-box;
       display: block;
       left: 0;
       width: calc(100% + @border-width);
-      margin: 20px 0;
       border: none;
-      padding: 10px;
-      text-align: right;
+      padding: 20px 20px;
       transition: all ease 0.2s;
       outline: none;
+      text-align: left;
       cursor: pointer;
 
       &:hover {
@@ -170,12 +169,12 @@ body,
 
       &:focus,
       &__selected {
-        width: calc(120% + @border-width);
-        left: -20%;
+        width: calc(100% + @border-width);
+        left: 0;
 
         &:hover {
-          width: calc(120% + @border-width);
-          left: -20%;
+          width: calc(100% + @border-width);
+          left: 0;
         }
       }
 
@@ -201,20 +200,24 @@ body,
     width: 240px;
     height: 100px;
     overflow: hidden;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
     margin: 10px;
     padding: 10px;
-    transition: box-shadow ease 0.2s;
+    transition: ease 0.2s;
+    transition-property: box-shadow top;
     border-radius: 3px;
     background-color: #ffffff;
     display: inline-block;
+    position: relative;
+    top: 0;
 
     &:hover {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      top: -2px;
     }
 
     &.active {
-      @shadow-color:  rgba(255, 0, 0, 0.575);
+      @shadow-color: rgba(255, 0, 0, 0.575);
       box-shadow: 0 0 20px @shadow-color;
       animation: hover 1.5s ease-in-out infinite;
 
@@ -232,7 +235,7 @@ body,
     }
 
     &__body {
-      height: calc(100% - @footer-height);
+      height: calc(100% - @footer-height * 2);
       display: flex;
       flex-direction: column;
     }
@@ -242,6 +245,24 @@ body,
       width: calc(100% + 20px);
       height: 1px;
       background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &__href {
+      width: fit-content;
+    }
+
+    &__header {
+      height: @footer-height;
+      display: flex;
+    }
+
+    &__tags {
+      flex: 1;
+      justify-content: flex-end;
+    }
+
+    &__tag {
+      margin-left: 3px;
     }
 
     &__footer {

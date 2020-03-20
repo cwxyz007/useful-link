@@ -36,6 +36,7 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
+    "color": "^3.1.2",
     "fuse.js": "^3.4.5",
     "jinrishici": "^1.0.6",
     "nprogress": "^0.2.0",
