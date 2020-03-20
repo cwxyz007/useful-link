@@ -28,6 +28,7 @@
     "logo": "fas fa-image",
 
     "video": "fab fa-youtube",
-    "code": "fas fa-code"
+    "code": "fas fa-code",
+    "terminal": "fas fa-terminal"
   }
 }

@@ -61,7 +61,7 @@
     "title": "Cloc",
     "icon": "fas fa-tools",
     "desc": "统计代码行数的工具",
-    "tags": ["win", "mac", "linux"],
+    "tags": ["terminal"],
     "links": {
       "git": "https://github.com/AlDanial/cloc"
     }
