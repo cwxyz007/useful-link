@@ -1,5 +1,6 @@
 import { h } from 'preact'
 import configUtils from './configs'
+import { hrefUtil, hrefParams } from './share'
 
 function FooterLink({ url, icon }) {
   return (
@@ -43,10 +44,7 @@ function NavigationItem({ item, site, onClick }) {
   })
 
   const changeUrlToShare = () => {
-    const url = new URL(location.href)
-    url.searchParams.set('title', item.title)
-
-    history.replaceState(null, null, url.href)
+    hrefUtil.setParam(hrefParams.title, item.title)
   }
 
   const homeUrl = (item.links || {}).href
@@ -63,7 +61,12 @@ function NavigationItem({ item, site, onClick }) {
   ))
 
   return (
-    <div className="navigation-item" id={item.title} onClick={changeUrlToShare}>
+    <div
+      className="navigation-item"
+      id={item.title}
+      title={item.title}
+      onClick={changeUrlToShare}
+    >
       <div className="navigation-item__header">
         <a
           className="navigation-item__href flex-v-center plain-url"

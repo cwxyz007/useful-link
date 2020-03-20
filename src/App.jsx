@@ -8,7 +8,7 @@ import configUtils from './configs'
 import SearchBar from './SearchBar'
 import Fuse from 'fuse.js'
 import Footer from './Footer'
-import { initShare } from './share'
+import { initShare, hrefUtil, hrefParams } from './share'
 
 NProgress.configure({
   showSpinner: false
@@ -56,6 +56,8 @@ class App extends Component {
   selectedCategory(category) {
     localStorage.setItem(selectCategoryKey, category)
 
+    hrefUtil.setParam(hrefParams.category, category)
+
     this.setState({
       selectedCategory: category,
       searchText: ''
@@ -69,7 +71,11 @@ class App extends Component {
 
     const siteConfigs = configUtils.site
     const categories = configUtils.categories
-    const selectedCategory = localStorage.getItem(selectCategoryKey)
+
+    const selectedCategory =
+      hrefUtil.getParam(hrefParams.category) ||
+      localStorage.getItem(selectCategoryKey)
+
     const selectedCategoryItem =
       configUtils.categories.find(c => c.title === selectedCategory) ||
       configUtils.categories[0]

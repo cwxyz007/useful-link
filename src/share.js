@@ -1,37 +1,56 @@
-import configUtils from './configs'
+export const hrefParams = Object.freeze({
+  title: 't',
+  category: 'c'
+})
+
+export const hrefUtil = {
+  /**
+   *
+   * @param {string} key
+   * @param {string} value
+   */
+  setParam(key, value) {
+    const url = new URL(location.href)
+    url.searchParams.set(key, value)
+
+    history.pushState({}, '', url.href)
+  },
+  /**
+   *
+   * @param {string} key
+   */
+  getParam(key) {
+    const url = new URL(location.href)
+    return url.searchParams.get(key)
+  }
+}
 
 let activeEl = null
+function checkSharedTitle() {
+  const title = hrefUtil.getParam(hrefParams.title)
 
-function checkSharedTitle () {
-  const items = configUtils.items
-  const categories = configUtils.categories
-  const url = new URL(location.href)
-  const t = url.searchParams.get('title')
-  const find = items.find((i) => i.title === t)
-  if (!find) {
+  if (!title) {
     return
   }
 
-  const tag = find.tags[0]
+  const $item = document.getElementById(title)
 
-  const category = categories.find((c) => c.tags.indexOf(tag) >= 0)
-
-  if (category) {
-    document.getElementById(category.title).click()
-    setTimeout(() => {
-      activeEl = document.getElementById(find.title)
-      activeEl.classList.add('active')
-    }, 10)
+  if ($item) {
+    activeEl = $item
+    activeEl.classList.add('active')
   }
 }
 
-function removeActiveState () {
+function removeActiveState() {
   if (activeEl) {
     activeEl.classList.remove('active')
   }
+
+  window.removeEventListener('load', checkSharedTitle)
+  window.removeEventListener('click', removeActiveState)
 }
 
-export function initShare () {
+export function initShare() {
   window.addEventListener('load', checkSharedTitle)
   window.addEventListener('click', removeActiveState)
 }

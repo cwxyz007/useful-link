@@ -1,6 +1,7 @@
 import stripJsonComments from 'strip-json-comments'
 import Color from 'color'
 import NProgress from 'nprogress'
+import { contain as containOne } from './utils'
 
 /**
  *
@@ -38,6 +39,11 @@ class ConfigUtils {
      * @type {string[]}
      */
     this.tags = []
+
+    /**
+     * @type {Map<string, import('./define').ShareItem[]>}
+     */
+    this._cacheTagItems = new Map()
   }
 
   async _getSiteConfigs() {
@@ -88,14 +94,23 @@ class ConfigUtils {
    * @param {string[]} tags
    */
   getItemsByTags(tags) {
+    const exist = this._cacheTagItems.get(tags.toString())
+
+    if (exist) {
+      return exist
+    }
+
     const items = []
+
     this.items.forEach(item => {
-      item.tags.forEach(t => {
-        if (tags.includes(t) || tags.includes('*')) {
-          !items.includes(item) && items.push(item)
-        }
-      })
+      const r = containOne(item.tags, tags)
+
+      if (r || tags.includes('*')) {
+        items.push(item)
+      }
     })
+
+    this._cacheTagItems.set(tags.toString(), items)
 
     return items
   }
