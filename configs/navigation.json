@@ -231,5 +231,12 @@
     "links": {
       "href": "https://shuax.com/project/mouseinc/"
     }
-  }
+  },
+  {
+    "title": "UsbEAm Hosts Editor",
+    "desc": "不同游戏平台 hosts 修改",
+    "tags": ["game", "win"],
+    "links": {
+      "href": "https://www.dogfight360.com/blog/475/"
+    }
 ]
