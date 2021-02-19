@@ -30,7 +30,7 @@ function Favicon({ icon, homeUrl }) {
 
 function NavigationItem({ item, site, onClick }) {
   // placeholder empty item
-  if (item === 0) {
+  if (!item) {
     return <div className="navigation-item" style={{ opacity: 0 }} />
   }
 

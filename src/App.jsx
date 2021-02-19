@@ -118,7 +118,7 @@ class App extends Component {
     const bgColor = selectedCategoryItem.bgColor
 
     const items = searchText
-      ? this.fuse.search(searchText)
+      ? this.fuse.search(searchText).map(n => n.item)
       : configUtils.getItemsByTags(selectedCategoryItem.tags)
 
     const shiCiTitle = shiCi?.origin?.title
