@@ -53,4 +53,4 @@ jobs:
           git config user.email "x.li.gem@gmail.com"
           git config user.name "Github CI Bot"
           git commit --amend -m "Site updated - `date '+%Y-%m-%d %H:%M:%S'`"
-          git push 
+          git push -f
