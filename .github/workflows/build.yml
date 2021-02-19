@@ -5,7 +5,6 @@ name: Node.js CI
 
 on:
   push:
-    branches: [master]
     tags:
       - "release-**"
 
@@ -48,7 +47,7 @@ jobs:
       - name: Commit and push
         run: |
           rm -rf __docs/*
-          cp dist/ __docs/
+          cp -r dist/ __docs/
           cd __docs
           git add .
           git config user.email "x.li.gem@gmail.com"
