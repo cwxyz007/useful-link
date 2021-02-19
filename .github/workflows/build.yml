@@ -6,7 +6,7 @@ name: Node.js CI
 on:
   push:
     tags:
-      - "release-**"
+      - "v**"
 
 jobs:
   build:
@@ -47,10 +47,10 @@ jobs:
       - name: Commit and push
         run: |
           rm -rf __docs/*
-          cp -r dist/ __docs/
+          cp -r dist/* __docs/
           cd __docs
           git add .
           git config user.email "x.li.gem@gmail.com"
           git config user.name "Github CI Bot"
-          git commit -m "Site updated - `date '+%Y-%m-%d %H:%M:%S'`"
+          git commit --amend -m "Site updated - `date '+%Y-%m-%d %H:%M:%S'`"
           git push 
