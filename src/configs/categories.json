@@ -5,7 +5,7 @@
     "icon": "grid"
   },
   {
-    "tags": ["code"],
+    "tags": ["code", "api"],
     "title": "开发工具",
     "icon": "code"
   },

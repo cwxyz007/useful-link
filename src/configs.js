@@ -1,24 +1,9 @@
-import stripJsonComments from 'strip-json-comments'
 import Color from 'color'
 import NProgress from 'nprogress'
 import { contain as containOne } from './utils'
-
-/**
- *
- * @param {string} data
- */
-function parseJsonWithComment(data) {
-  if (typeof data !== 'string') {
-    return data
-  }
-
-  return JSON.parse(stripJsonComments(data))
-}
-
-async function get(url) {
-  const data = await fetch(url)
-  return data.text()
-}
+import dbCategories from './configs/categories.json'
+import dbNavigation from './configs/navigation.json'
+import dbSite from './configs/site.json'
 
 class ConfigUtils {
   constructor() {
@@ -46,19 +31,16 @@ class ConfigUtils {
     this._cacheTagItems = new Map()
   }
 
-  async _getSiteConfigs() {
-    const data = await get('./configs/site.json')
-    return parseJsonWithComment(data)
+  _getSiteConfigs() {
+    return dbSite
   }
 
-  async _getNavigationData() {
-    const data = await get('./configs/navigation.json')
-    return parseJsonWithComment(data)
+  _getNavigationData() {
+    return dbNavigation
   }
 
-  async _getCategoriesData() {
-    let data = await get('./configs/categories.json')
-    data = await parseJsonWithComment(data)
+  _getCategoriesData() {
+    const data = dbCategories
 
     const len = data.length
     for (const idx in data) {
@@ -68,20 +50,20 @@ class ConfigUtils {
     return data
   }
 
-  async fetchData() {
-    this.site = await this._getSiteConfigs()
+  fetchData() {
+    this.site = this._getSiteConfigs()
     NProgress.set(0.3)
-    this.categories = await this._getCategoriesData()
+    this.categories = this._getCategoriesData()
     NProgress.set(0.6)
-    this.items = await this._getNavigationData()
+    this.items = this._getNavigationData()
     NProgress.set(0.9)
 
     this._cacheTags()
   }
 
   _cacheTags() {
-    this.items.forEach(item => {
-      item.tags.forEach(t => {
+    this.items.forEach((item) => {
+      item.tags.forEach((t) => {
         if (!this.tags.includes(t)) {
           this.tags.push(t)
         }
@@ -102,7 +84,7 @@ class ConfigUtils {
 
     const items = []
 
-    this.items.forEach(item => {
+    this.items.forEach((item) => {
       const r = containOne(item.tags, tags)
 
       if (r || tags.includes('*')) {

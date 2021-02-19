@@ -66,7 +66,7 @@ class App extends Component {
 
   async init() {
     NProgress.start()
-    await configUtils.fetchData()
+    configUtils.fetchData()
     initShare()
 
     const siteConfigs = configUtils.site
@@ -77,7 +77,7 @@ class App extends Component {
       localStorage.getItem(selectCategoryKey)
 
     const selectedCategoryItem =
-      configUtils.categories.find(c => c.title === selectedCategory) ||
+      configUtils.categories.find((c) => c.title === selectedCategory) ||
       configUtils.categories[0]
 
     this.setState({
@@ -112,7 +112,7 @@ class App extends Component {
     }
 
     const selectedCategoryItem = categories.find(
-      c => c.title === selectedCategory
+      (c) => c.title === selectedCategory
     )
 
     const bgColor = selectedCategoryItem.bgColor
@@ -121,18 +121,18 @@ class App extends Component {
       ? this.fuse.search(searchText)
       : configUtils.getItemsByTags(selectedCategoryItem.tags)
 
-    const shiCiTitle = shiCi && shiCi.origin.title
+    const shiCiTitle = shiCi?.origin?.title
     const shiCiContent =
-      shiCi && `${shiCi.content} 一一 ${shiCiTitle}(${shiCi.origin.author})`
+      shiCi && `${shiCi.content} 一一 ${shiCiTitle}(${shiCi?.origin?.author})`
     const hanyuLink = encodeURI(
-      `https://hanyu.baidu.com/s?wd=${shiCiTitle} ${shiCi.origin.author}`
+      `https://hanyu.baidu.com/s?wd=${shiCiTitle} ${shiCi?.origin?.author}`
     )
 
     return (
       <div className="app">
         <div
           className="header header-img"
-          style={{ backgroundImage: `url(${site.header.bgImg})` }}
+          // style={{ backgroundImage: `url(${site.header.bgImg})` }}
         >
           <span
             className="header-title ab-v-center"
@@ -176,7 +176,7 @@ class App extends Component {
             <Navigation
               items={items}
               site={site}
-              onClickItem={tag => this.handleSearchInput(tag)}
+              onClickItem={(tag) => this.handleSearchInput(tag)}
             />
             <Footer />
           </div>

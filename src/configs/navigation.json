@@ -239,5 +239,13 @@
     "links": {
       "href": "https://www.dogfight360.com/blog/475/"
     }
+  },
+  {
+    "title": "Wallhaven",
+    "desc": "优质壁纸网站，并提供 API",
+    "tags": ["api", "wallpaper"],
+    "links": {
+      "href": "https://wallhaven.cc/help/api"
+    }
   }
 ]
