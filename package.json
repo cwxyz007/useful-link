@@ -6,7 +6,8 @@
     "start": "vite",
     "build": "vite build",
     "lint": "eslint src/**/*.jsx src/**/*.js",
-    "release": "glib release"
+    "release": "glib release",
+    "test": "yarn lint"
   },
   "devDependencies": {
     "@exyz/glib": "^0.3.7",
