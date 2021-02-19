@@ -5,9 +5,11 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "lint": "eslint src/**/*.jsx src/**/*.js"
+    "lint": "eslint src/**/*.jsx src/**/*.js",
+    "release": "glib release"
   },
   "devDependencies": {
+    "@exyz/glib": "^0.3.7",
     "@prefresh/vite": "^2.1.0",
     "eslint": "^7.3.1",
     "eslint-config-standard": "^16.0.2",

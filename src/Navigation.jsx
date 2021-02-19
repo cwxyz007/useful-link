@@ -21,11 +21,13 @@ function Favicon({ icon, homeUrl }) {
     icon || 'https://s2.googleusercontent.com/s2/favicons?domain_url=' + homeUrl
   const isSvg = icon && !icon.startsWith('http')
 
-  return isSvg ? (
+  return isSvg
+    ? (
     <i className={`navigation-item__icon ${favicon}`} />
-  ) : (
+      )
+    : (
     <img src={favicon} className="navigation-item__icon" />
-  )
+      )
 }
 
 function NavigationItem({ item, site, onClick }) {
