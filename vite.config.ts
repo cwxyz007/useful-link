@@ -3,6 +3,7 @@ import preactRefresh from '@prefresh/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   esbuild: {
     jsxFactory: 'h',
     jsxFragment: 'Fragment',
