@@ -1,10 +1,10 @@
 {
   "header": {
-    "bgImg": "https://images8.alphacoders.com/613/613334.jpg",
+    "bgImg": "https://w.wallhaven.cc/full/j3/wallhaven-j3339m.jpg",
     "color": "#000000",
     "edit": {
       "title": "添加新网站",
-      "addr": "https://github.com/cwxyz007/useful-link/blob/master/configs/navigation.json"
+      "addr": "https://github.com/cwxyz007/useful-link/blob/master/src/configs/navigation.json"
     }
   },
   "icons": {

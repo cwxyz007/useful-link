@@ -132,7 +132,7 @@ class App extends Component {
       <div className="app">
         <div
           className="header header-img"
-          // style={{ backgroundImage: `url(${site.header.bgImg})` }}
+          style={{ backgroundImage: `url(${site.header.bgImg})` }}
         >
           <span
             className="header-title ab-v-center"
