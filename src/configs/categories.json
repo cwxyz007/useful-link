@@ -41,7 +41,7 @@
   },
   {
     "tags": ["mirror"],
-    "title": "镜像",
-    "icon": "clone"
+    "title": "镜像源",
+    "icon": "copy"
   }
 ]

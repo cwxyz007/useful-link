@@ -20,12 +20,14 @@
     "mac": "fab fa-apple",
     "linux": "fab fa-linux",
     "archive": "fas fa-archive",
+    "copy": "fas fa-copy",
 
     "image": "fas fa-image",
     "gif": "fas fa-image",
     "wallpaper": "fas fa-image",
     "icon": "fas fa-image",
     "logo": "fas fa-image",
+    "mirror": "fas fa-expand",
 
     "video": "fab fa-youtube",
     "code": "fas fa-code",
