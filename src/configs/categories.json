@@ -38,5 +38,10 @@
     "tags": ["other"],
     "title": "其它",
     "icon": "archive"
+  },
+  {
+    "tags": ["mirror"],
+    "title": "镜像",
+    "icon": "clone"
   }
 ]

@@ -247,5 +247,53 @@
     "links": {
       "href": "https://wallhaven.cc/help/api"
     }
+  },
+  {
+    "title": "清华源镜像",
+    "desc": "镜像",
+    "tags": ["mirror", "china"],
+    "links": {
+      "href": "https://mirrors.tuna.tsinghua.edu.cn/"
+    }
+  },
+  {
+    "title": "腾讯源镜像",
+    "desc": "镜像",
+    "tags": ["mirror", "china"],
+    "links": {
+      "href": "https://mirrors.cloud.tencent.com/"
+    }
+  },
+  {
+    "title": "阿里源镜像",
+    "desc": "镜像",
+    "tags": ["mirror", "china"],
+    "links": {
+      "href": "https://developer.aliyun.com/mirror/"
+    }
+  },
+  {
+    "title": "华为源镜像",
+    "desc": "镜像",
+    "tags": ["mirror", "china"],
+    "links": {
+      "href": "https://mirrors.huaweicloud.com/"
+    }
+  },
+  {
+    "title": "中科大源镜像",
+    "desc": "镜像",
+    "tags": ["mirror", "china"],
+    "links": {
+      "href": "http://mirrors.ustc.edu.cn/"
+    }
+  },
+  {
+    "title": "淘宝 NPM 镜像",
+    "desc": "镜像",
+    "tags": ["mirror", "china", "npm"],
+    "links": {
+      "href": "https://developer.aliyun.com/mirror/NPM"
+    }
   }
 ]
