@@ -8,14 +8,6 @@
     }
   },
   {
-    "title": "Material CSS Kit",
-    "desc": "Materialize 风格的样式组件",
-    "tags": ["code"],
-    "links": {
-      "href": "https://materializecss.com/"
-    }
-  },
-  {
     "title": "I18n locales code",
     "icon": "fas fa-language",
     "desc": "翻译时对应的 code",
@@ -294,6 +286,183 @@
     "tags": ["mirror", "china", "npm"],
     "links": {
       "href": "https://developer.aliyun.com/mirror/NPM"
+    }
+  },
+  {
+    "title": "Whimsical",
+    "desc": "一个非常优秀的流程图工具",
+    "tags": ["tool", "flow", "web"],
+    "links": {
+      "href": "https://whimsical.com/flowcharts"
+    }
+  },
+  {
+    "title": "file examples",
+    "desc": "提供各种各样格式的测试文件",
+    "tags": ["tool", "web"],
+    "links": {
+      "href": "https://file-examples.com/"
+    }
+  },
+  {
+    "title": "Magi",
+    "desc": "一个基于机器学习的搜索引擎，界面很好看",
+    "tags": ["tool", "search", "web"],
+    "links": {
+      "href": "https://magi.com/"
+    }
+  },
+  {
+    "title": "Symbolab",
+    "desc": "一个非常优秀的数学计算器，解方程/函数的利器",
+    "tags": ["tool", "math", "web"],
+    "links": {
+      "href": "https://zs.symbolab.com/"
+    }
+  },
+  {
+    "title": "小鸡词典",
+    "desc": "一个解释流行词汇搜索引擎",
+    "tags": ["tool", "search", "web"],
+    "links": {
+      "href": "https://jikipedia.com/"
+    }
+  },
+  {
+    "title": "MagicaVoxel",
+    "desc": "一个体素编辑工具",
+    "tags": ["software", "mac", "win"],
+    "links": {
+      "href": "https://ephtracy.github.io/"
+    }
+  },
+  {
+    "title": "VoxEdit",
+    "desc": "一个体素编辑工具，支持动画",
+    "tags": ["software", "mac", "win", "linux"],
+    "links": {
+      "href": "https://www.voxedit.io/"
+    }
+  },
+  {
+    "title": "Google Web",
+    "desc": "Google 发布 Web 新功能以及最佳实践的地方",
+    "tags": ["news", "web"],
+    "links": {
+      "href": "https://developers.google.com/web"
+    }
+  },
+  {
+    "title": "Three.js",
+    "desc": "一个浏览器 3D 库，可以做非常酷炫的东西",
+    "tags": ["js", "openGL"],
+    "links": {
+      "href": "https://threejs.org/"
+    }
+  },
+  {
+    "title": "Green Sock",
+    "desc": "一个动画库，争做现代浏览器动画的标准",
+    "tags": ["js", "animation"],
+    "links": {
+      "href": "https://greensock.com/"
+    }
+  },
+  {
+    "title": "Katex",
+    "desc": "在 Markdown 中写数学表达式",
+    "tags": ["markdown", "math"],
+    "links": {
+      "href": "https://katex.org/"
+    }
+  },
+  {
+    "title": "un0ver",
+    "desc": "IOS 越狱工具",
+    "tags": ["ios", "crack"],
+    "links": {
+      "href": "https://unc0ver.dev/"
+    }
+  },
+  {
+    "title": "Nexus mods",
+    "desc": "单机游戏 mod 管理工具和论坛",
+    "tags": ["game", "mod", "forum", "win"],
+    "links": {
+      "href": "https://www.nexusmods.com/"
+    }
+  },
+  {
+    "title": "Dynamic Wallpaper",
+    "desc": "mac 动态壁纸",
+    "tags": ["mac", "wallpaper", "web"],
+    "links": {
+      "href": "https://dynamicwallpaper.club/"
+    }
+  },
+  {
+    "title": "OSU Game",
+    "desc": "一个在线戳泡泡的网站，不知道会不会倒闭",
+    "tags": ["game", "web"],
+    "links": {
+      "href": "https://osugame.online/"
+    }
+  },
+  {
+    "title": "DeepL",
+    "desc": "一个基于机器学习的翻译工具",
+    "tags": ["translate", "web", "mac", "win"],
+    "links": {
+      "href": "https://www.deepl.com"
+    }
+  },
+  {
+    "title": "Padavan",
+    "desc": "一个好用的路由器固件",
+    "tags": ["router", "firmware", "web"],
+    "links": {
+      "href": "https://opt.cn2qq.com/"
+    }
+  },
+  {
+    "title": "微 PE",
+    "desc": "一个好用的 windows PE 工具",
+    "tags": ["win", "tool"],
+    "links": {
+      "href": "http://www.wepe.com.cn/"
+    }
+  },
+  {
+    "title": "Blender",
+    "desc": "一个开源的建模工具，但做游戏和视频也不在话下",
+    "tags": ["win", "mac", "linux"],
+    "links": {
+      "href": "https://www.blender.org/"
+    }
+  },
+  {
+    "title": "MIUI",
+    "desc": "一个开源的简洁的 Android 系统",
+    "tags": ["android", "firmware"],
+    "links": {
+      "href": "https://miuipolska.pl/"
+    }
+  },
+  {
+    "title": "Flume",
+    "desc": "一个开源节点编辑工具库",
+    "tags": ["web", "js"],
+    "links": {
+      "href": "https://flume.dev/",
+      "git": "https://github.com/chrisjpatty/flume"
+    }
+  },
+  {
+    "title": "cdnjs",
+    "desc": "听说是全球最大的 cdn 提供商，免费，速度也不错",
+    "tags": ["web", "js"],
+    "links": {
+      "href": "https://cdnjs.com/"
     }
   }
 ]
