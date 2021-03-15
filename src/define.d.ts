@@ -37,6 +37,7 @@ export interface SiteConfig {
   header: {
     bgImg: string
     color: string
+    bgColor: string
     edit: {
       title: string
       addr: string

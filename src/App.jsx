@@ -118,7 +118,7 @@ class App extends Component {
     const bgColor = selectedCategoryItem.bgColor
 
     const items = searchText
-      ? this.fuse.search(searchText).map(n => n.item)
+      ? this.fuse.search(searchText).map((n) => n.item)
       : configUtils.getItemsByTags(selectedCategoryItem.tags)
 
     const shiCiTitle = shiCi?.origin?.title
@@ -132,7 +132,10 @@ class App extends Component {
       <div className="app">
         <div
           className="header header-img"
-          style={{ backgroundImage: `url(${site.header.bgImg})` }}
+          style={{
+            backgroundColor: site.header.bgColor,
+            backgroundImage: `url(${site.header.bgImg})`
+          }}
         >
           <span
             className="header-title ab-v-center"
@@ -149,7 +152,7 @@ class App extends Component {
               rel="noopener noreferrer"
             >
               <i
-                style={{ marginLeft: 10 }}
+                style={{ marginLeft: 10, color: site.header.color }}
                 className="fas fa-external-link-alt icon"
               />
             </a>
