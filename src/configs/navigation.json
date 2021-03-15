@@ -474,11 +474,11 @@
     }
   },
   {
-    "title": "Prisma Studio",
-    "desc": "一个免费的比较漂亮的支持增删改查的修改数据库的软件",
+    "title": "Beekeeper Studio",
+    "desc": "一个免费的漂亮的可查看和修改数据库的软件",
     "tags": ["database", "software", "mac", "win", "linux"],
     "links": {
-      "href": "https://www.prisma.io/studio"
+      "href": "https://www.beekeeperstudio.io/"
     }
   }
 ]
