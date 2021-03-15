@@ -464,5 +464,13 @@
     "links": {
       "href": "https://cdnjs.com/"
     }
+  },
+  {
+    "title": "Steam DB",
+    "desc": "Steam 数据库，查询史上最低价神器",
+    "tags": ["search", "game"],
+    "links": {
+      "href": "https://steamdb.info/"
+    }
   }
 ]
